@@ -8,7 +8,7 @@ const Footer = () => (
                 <h3 className="font-semibold text-lg mb-4 text-center">Technologies & Services</h3>
                 
                 {/* Responsive Grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 border-b border-gray-300 pb-6">
+                <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-6 border-b border-gray-300 pb-6">
                     {/** Technology Categories **/}
                     {[
                         {
