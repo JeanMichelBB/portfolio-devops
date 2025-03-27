@@ -3,15 +3,15 @@ import { Link } from 'react-router-dom';
 import linuxImage from '../assets/linuximage.jpg';
 import gitImage from '../assets/gitimage.jpg';
 import pythonImage from '../assets/pythonimage.jpg';
-import dockerImage from '../assets/dockerimage.jpg';
-import networkingImage from '../assets/networkingimage.jpg';
-import kubernetesImage from '../assets/kubernetesimage.jpg';
-import monitoringImage from '../assets/monitoringimage.jpg';
-import nginxImage from '../assets/nginximage.jpg';
-import terraformImage from '../assets/terraformimage.jpg';
-import ansibleImage from '../assets/ansibleimage.jpg';
-import cloudImage from '../assets/cloudimage.jpg';
-import cicdImage from '../assets/cicdimage.jpg';
+import dockerImage from '../assets/dockerImage.jpg';
+import networkingImage from '../assets/networkingImage.jpg';
+import kubernetesImage from '../assets/kubernetesImage.jpg';
+import monitoringImage from '../assets/monitoringImage.jpg';
+import nginxImage from '../assets/nginxImage.jpg';
+import terraformImage from '../assets/terraformImage.jpg';
+import ansibleImage from '../assets/ansibleImage.jpg';
+import cloudImage from '../assets/cloudImage.jpg';
+import cicdImage from '../assets/cicdImage.jpg';
 
 // Subject data
 const subjects = [
