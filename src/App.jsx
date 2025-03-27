@@ -1,35 +1,56 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Home from './pages/Home';
+import About from './pages/About';
+import Contact from './pages/Contact';
 
-function App() {
-  const [count, setCount] = useState(0)
+// Import all the subject components
+import Linux from './pages/Linux';
+import Git from './pages/Git';
+import Python from './pages/Python';
+import Docker from './pages/Docker';
+import Networking from './pages/Networking';
+import Kubernetes from './pages/Kubernetes';
+import Monitoring from './pages/Monitoring';
+import NGINX from './pages/NGINX';
+import Terraform from './pages/Terraform';
+import Ansible from './pages/Ansible';
+import Cloud from './pages/Cloud';
+import CICD from './pages/CICD';
 
+const App = () => {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <Router basename="/portfolio-devops">
+      <main className="text-gray-800 font-sans">
+        <Header />
+        <main className="bg-white">
+          <Routes>
+            {/* Home, About, Contact routes */}
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
 
-export default App
+            {/* Subject routes */}
+            <Route path="/linux-bash" element={<Linux />} />
+            <Route path="/git" element={<Git />} />
+            <Route path="/python" element={<Python />} />
+            <Route path="/docker" element={<Docker />} />
+            <Route path="/networking" element={<Networking />} />
+            <Route path="/kubernetes" element={<Kubernetes />} />
+            <Route path="/monitoring" element={<Monitoring />} />
+            <Route path="/nginx" element={<NGINX />} />
+            <Route path="/terraform" element={<Terraform />} />
+            <Route path="/ansible" element={<Ansible />} />
+            <Route path="/cloud" element={<Cloud />} />
+            <Route path="/cicd" element={<CICD />} />
+          </Routes>
+        </main>
+        <Footer />
+      </main>
+    </Router>
+  );
+};
+
+export default App;
