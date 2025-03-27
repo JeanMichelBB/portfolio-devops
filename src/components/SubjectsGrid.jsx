@@ -1,32 +1,32 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import linuxImage from '../assets/linuximage.jpg';
-import gitImage from '../assets/gitimage.jpg';
-import pythonImage from '../assets/pythonimage.jpg';
-import dockerImage from '../assets/dockerImage.jpg';
-import networkingImage from '../assets/networkingImage.jpg';
-import kubernetesImage from '../assets/kubernetesImage.jpg';
-import monitoringImage from '../assets/monitoringImage.jpg';
-import nginxImage from '../assets/nginxImage.jpg';
-import terraformImage from '../assets/terraformImage.jpg';
-import ansibleImage from '../assets/ansibleImage.jpg';
-import cloudImage from '../assets/cloudImage.jpg';
-import cicdImage from '../assets/cicdImage.jpg';
+import git from '../assets/git.jpg';
+import linux from '../assets/linux.jpg';
+import python from '../assets/python.jpg';
+import docker from '../assets/docker.jpg';
+import networking from '../assets/networking.jpg';
+import kubernetes from '../assets/kubernetes.jpg';
+import monitoring from '../assets/monitoring.jpg';
+import nginx from '../assets/nginx.jpg';
+import terraform from '../assets/terraform.jpg';
+import ansible from '../assets/ansible.jpg';
+import cloud from '../assets/cloud.jpg';
+import cicd from '../assets/cicd.jpg';
 
 // Subject data
 const subjects = [
-    { name: "Linux", path: "/linux-bash", description: "Learn about Linux and its powerful command-line interface.", image: linuxImage, bg: "bg-green-200" },
-    { name: "Git", path: "/git", description: "Version control with Git for collaborative development.", image: gitImage, bg: "bg-red-200" },
-    { name: "Python", path: "/python", description: "Explore the Python programming language for various use cases.", image: pythonImage, bg: "bg-yellow-200" },
-    { name: "Docker", path: "/docker", description: "Containerization with Docker for easier deployment.", image: dockerImage, bg: "bg-blue-200" },
-    { name: "Networking", path: "/networking", description: "Understand networking and internet protocols.", image: networkingImage, bg: "bg-purple-200" },
-    { name: "Kubernetes", path: "/kubernetes", description: "Container orchestration with Kubernetes for scalable apps.", image: kubernetesImage, bg: "bg-teal-200" },
-    { name: "Monitoring", path: "/monitoring", description: "Learn about monitoring tools to track system performance.", image: monitoringImage, bg: "bg-orange-200" },
-    { name: "NGINX", path: "/nginx", description: "Web server and reverse proxy with NGINX.", image: nginxImage, bg: "bg-gray-200" },
-    { name: "Terraform", path: "/terraform", description: "Infrastructure as code with Terraform.", image: terraformImage, bg: "bg-indigo-200" },
-    { name: "Ansible", path: "/ansible", description: "Automation with Ansible for configuration management.", image: ansibleImage, bg: "bg-pink-200" },
-    { name: "Cloud", path: "/cloud", description: "Cloud computing technologies for modern applications.", image: cloudImage, bg: "bg-cyan-200" },
-    { name: "CI/CD", path: "/cicd", description: "Continuous integration and delivery workflows.", image: cicdImage, bg: "bg-lime-200" },
+    { name: "Linux", path: "/linux-bash", description: "Learn about Linux and its powerful command-line interface.", image: linux, bg: "bg-green-200" },
+    { name: "Git", path: "/git", description: "Version control with Git for collaborative development.", image: git, bg: "bg-red-200" },
+    { name: "Python", path: "/python", description: "Explore the Python programming language for various use cases.", image: python, bg: "bg-yellow-200" },
+    { name: "Docker", path: "/docker", description: "Containerization with Docker for easier deployment.", image: docker, bg: "bg-blue-200" },
+    { name: "Networking", path: "/networking", description: "Understand networking and internet protocols.", image: networking, bg: "bg-purple-200" },
+    { name: "Kubernetes", path: "/kubernetes", description: "Container orchestration with Kubernetes for scalable apps.", image: kubernetes, bg: "bg-teal-200" },
+    { name: "Monitoring", path: "/monitoring", description: "Learn about monitoring tools to track system performance.", image: monitoring, bg: "bg-orange-200" },
+    { name: "NGINX", path: "/nginx", description: "Web server and reverse proxy with NGINX.", image: nginx, bg: "bg-gray-200" },
+    { name: "Terraform", path: "/terraform", description: "Infrastructure as code with Terraform.", image: terraform, bg: "bg-indigo-200" },
+    { name: "Ansible", path: "/ansible", description: "Automation with Ansible for configuration management.", image: ansible, bg: "bg-pink-200" },
+    { name: "Cloud", path: "/cloud", description: "Cloud computing technologies for modern applications.", image: cloud, bg: "bg-cyan-200" },
+    { name: "CI/CD", path: "/cicd", description: "Continuous integration and delivery workflows.", image: cicd, bg: "bg-lime-200" },
 ];
 
 const SubjectsGrid = () => {
