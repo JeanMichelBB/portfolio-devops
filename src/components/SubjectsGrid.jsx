@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import git from '../assets/git.jpg';
 import linux from '../assets/linux.jpg';
 import python from '../assets/python.jpg';
@@ -30,11 +30,23 @@ const subjects = [
 ];
 
 const SubjectsGrid = () => {
+    const location = useLocation();
+
+    const handleClick = (path) => {
+        // Save current scroll position
+        sessionStorage.setItem("scrollPosition", window.scrollY);
+        sessionStorage.setItem("previousPath", location.pathname);
+    };
+
     return (
         <div className="grid grid-cols-1 md:grid-cols-2 w-full border-[5px] border-white">
             {subjects.map((subject, index) => (
                 <div key={index} className={`relative ${subject.bg} border-[5px] border-white flex`}>
-                    <Link to={subject.path} className="block hover:underline z-10 relative w-full h-full p-4" onClick={() => window.scrollTo(0, 0)}>
+                    <Link 
+                        to={subject.path} 
+                        className="block hover:underline z-10 relative w-full h-full p-4" 
+                        onClick={() => handleClick(subject.path)}
+                    >
                         <div className="flex w-full flex-col md:flex-row">
                             {/* Image */}
                             <div className="relative w-full md:w-2/3 h-60">

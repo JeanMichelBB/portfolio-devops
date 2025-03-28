@@ -1,7 +1,22 @@
 // src/pages/Contact.jsx
-import React from 'react';
+import React, { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 const Contact = () => {
+        const location = useLocation();
+    
+        useEffect(() => {
+            const previousPath = sessionStorage.getItem("previousPath");
+            const savedPosition = sessionStorage.getItem("scrollPosition");
+            window.scrollTo(0, 0);
+            
+            if (savedPosition && previousPath && location.pathname !== previousPath) {
+                window.scrollTo(0, parseInt(savedPosition, 10));
+                sessionStorage.removeItem("scrollPosition"); // Clear after applying
+                sessionStorage.removeItem("previousPath"); 
+            }
+        }, [location]);
+        
   return (
     <div className="min-h-screen text-center py-10 text">
       <h1 className="text-4xl font-bold text-gray-800 mb-6">Contact Me</h1>

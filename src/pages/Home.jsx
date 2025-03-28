@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import LatestProject from '../components/LatestProject';
 import SubjectsGrid from '../components/SubjectsGrid';
 import { Link } from 'react-router-dom';
@@ -6,10 +6,18 @@ import { Link } from 'react-router-dom';
 const Home = () => {
   const [showLatestProject, setShowLatestProject] = useState(false);
   const [showSubjectsGrid, setShowSubjectsGrid] = useState(false);
+  const scrollPositionRef = useRef(0); // Reference to track scroll position
 
   useEffect(() => {
+    // Restore scroll position on component mount
+    const savedScrollPosition = sessionStorage.getItem("scrollPosition");
+    if (savedScrollPosition) {
+      window.scrollTo(0, parseInt(savedScrollPosition, 10));
+    }
+
     const handleScroll = () => {
       const scrollY = window.scrollY;
+      scrollPositionRef.current = scrollY; // Update the scroll position on scroll
 
       if (scrollY > 100) { // Show <LatestProject />
         setShowLatestProject(true);
@@ -25,7 +33,12 @@ const Home = () => {
     };
 
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+
+    // Save scroll position when the component is unmounted or navigated away from
+    return () => {
+      sessionStorage.setItem("scrollPosition", scrollPositionRef.current);
+      window.removeEventListener('scroll', handleScroll);
+    };
   }, []);
 
   return (

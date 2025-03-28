@@ -110,8 +110,8 @@ const Footer = () => (
 
         {/* Social Media Links */}
         <div className="flex justify-center gap-4 mt-4">
-            <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" className="text-sm hover:text-blue-500">GitHub</a>
-            <a href="https://www.linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" className="text-sm hover:text-blue-500">LinkedIn</a>
+            <a href="https://github.com/JeanMichelBB" target="_blank" rel="noopener noreferrer" className="text-sm hover:text-blue-500">GitHub</a>
+            <a href="https://www.linkedin.com/in/jeanmichelbb" target="_blank" rel="noopener noreferrer" className="text-sm hover:text-blue-500">LinkedIn</a>
         </div>
 
         <p className="mt-4 text-xs text-gray-600">&copy; 2025 Jean-Michel. All rights reserved.</p>
