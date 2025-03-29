@@ -22,7 +22,7 @@ import CICD from './pages/CICD';
 
 const App = () => {
   return (
-    <Router basename="/portfolio-devops">
+    <Router>
       <main className="text-gray-800 font-sans">
         <Header />
         <main className="bg-white">
