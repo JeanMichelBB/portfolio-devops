@@ -9,7 +9,5 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
-  build: {
-    outDir: 'dist', // Where static files will go
-  },
+  base: '/portfolio-devops/',
 })
