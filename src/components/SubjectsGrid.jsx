@@ -15,18 +15,18 @@ import cicd from '../assets/cicd.jpg';
 
 
 const subjects = [
-    { name: "Linux", path: "/linux-bash", description: "Learn about Linux and its powerful command-line interface.", image: linux, bg: "bg-green-200" },
-    { name: "Git", path: "/git", description: "Version control with Git for collaborative development.", image: git, bg: "bg-red-200" },
-    { name: "Python", path: "/python", description: "Explore the Python programming language for various use cases.", image: python, bg: "bg-yellow-200" },
-    { name: "Docker", path: "/docker", description: "Containerization with Docker for easier deployment.", image: docker, bg: "bg-blue-200" },
-    { name: "Networking", path: "/networking", description: "Understand networking and internet protocols.", image: networking, bg: "bg-purple-200" },
-    { name: "Kubernetes", path: "/kubernetes", description: "Container orchestration with Kubernetes for scalable apps.", image: kubernetes, bg: "bg-teal-200" },
-    { name: "Monitoring", path: "/monitoring", description: "Learn about monitoring tools to track system performance.", image: monitoring, bg: "bg-orange-200" },
-    { name: "NGINX", path: "/nginx", description: "Web server and reverse proxy with NGINX.", image: nginx, bg: "bg-gray-200" },
-    { name: "Terraform", path: "/terraform", description: "Infrastructure as code with Terraform.", image: terraform, bg: "bg-indigo-200" },
-    { name: "Ansible", path: "/ansible", description: "Automation with Ansible for configuration management.", image: ansible, bg: "bg-pink-200" },
-    { name: "Cloud", path: "/cloud", description: "Cloud computing technologies for modern applications.", image: cloud, bg: "bg-cyan-200" },
-    { name: "CI/CD", path: "/cicd", description: "Continuous integration and delivery workflows.", image: cicd, bg: "bg-lime-200" },
+    { name: "Linux", path: "/linux-bash", description: "Deep understanding of Linux systems, terminal commands, and automation.", image: linux, bg: "bg-green-200" },
+    { name: "Git", path: "/git", description: "Proficient in Git workflows, branching strategies, and collaborative development.", image: git, bg: "bg-red-200" },
+    { name: "Python", path: "/python", description: "Experience in Python for scripting, automation, web development, and data processing.", image: python, bg: "bg-yellow-200" },
+    { name: "Docker", path: "/docker", description: "Skilled in containerization, Docker Compose, and image optimization.", image: docker, bg: "bg-blue-200" },
+    { name: "Networking", path: "/networking", description: "Strong grasp of network protocols, security, and system architecture.", image: networking, bg: "bg-purple-200" },
+    { name: "Kubernetes", path: "/kubernetes", description: "Knowledge of Kubernetes for managing containerized applications at scale.", image: kubernetes, bg: "bg-teal-200" },
+    { name: "Monitoring", path: "/monitoring", description: "Experience with system monitoring, metrics collection, and observability tools.", image: monitoring, bg: "bg-orange-200" },
+    { name: "NGINX", path: "/nginx", description: "Expertise in NGINX for load balancing, reverse proxying, and web serving.", image: nginx, bg: "bg-gray-200" },
+    { name: "Terraform", path: "/terraform", description: "Infrastructure as code (IaC) using Terraform for cloud resource management.", image: terraform, bg: "bg-indigo-200" },
+    { name: "Ansible", path: "/ansible", description: "Automating system configuration and deployment with Ansible playbooks.", image: ansible, bg: "bg-pink-200" },
+    { name: "Cloud", path: "/cloud", description: "Hands-on experience with cloud platforms, architecture, and scalability.", image: cloud, bg: "bg-cyan-200" },
+    { name: "CI/CD", path: "/cicd", description: "Building and maintaining automated CI/CD pipelines for software deployment.", image: cicd, bg: "bg-lime-200" },
 ];
 
 const SubjectsGrid = () => {

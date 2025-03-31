@@ -25,7 +25,7 @@ const Home = () => {
         setShowSubjectsGrid(false);
       }
     };
-    
+
     setTimeout(() => setIsVisible(true), 100);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -34,11 +34,16 @@ const Home = () => {
   return (
     <div className="min-h-screen text-center py-20">
       <div className={`transition-opacity duration-500 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
-      <h1 className="text-4xl font-bold text-gray-800 mb-4">Home</h1>
-      <p className="text-lg text-gray-700 max-w-2xl mx-auto p-3">
-        Welcome to my portfolio website. Here, you can learn more about me, my projects, and my experiences. Feel free to explore the site and reach out to me if you have any inquiries or collaboration opportunities. I would love to hear from you.
-        <Link to="/about" className="text-blue-500"> More about me here</Link>.
-      </p>
+        <h1 className="text-5xl font-extrabold text-gray-900 mb-6 tracking-wide">
+          Welcome to My DevOps Playground
+        </h1>
+        <p className="text-lg text-gray-800 max-w-2xl mx-auto p-4 leading-relaxed">
+          Hi, I’m <span className="font-semibold text-gray-900">Jean-Michel Bérubé</span>, a DevOps engineer passionate about automation, cloud infrastructure, and system optimization.
+          Explore my knowledge, projects, and hands-on experience in <span className="font-medium text-gray-900">Linux, Docker, Kubernetes</span>, and more
+          <Link to="/about" className="text-blue-600 font-medium hover:underline hover:text-blue-700 transition-colors">
+            . More about me here
+          </Link>.
+        </p>
       </div>
 
       <div className="mt-10">
@@ -52,12 +57,24 @@ const Home = () => {
           <SubjectsGrid />
           <Carousel />
         </div>
-
-        <div className="text-lg text-gray-700 mx-auto bg-gradient-to-b from-cyan-200 to-white border-b-10 border-r-10 border-l-10 border-white">
-          <p className="text-lg text-gray-700 max-w-2xl mx-auto p-3">
-            I am a passionate developer with a keen interest in various technologies and services. My expertise spans across multiple domains, including cloud computing, DevOps, and web development. I enjoy learning new skills and applying them to real-world projects.
-          </p>
-        </div>
+        <div className="text-lg text-gray-700 mx-auto bg-gradient-to-b from-cyan-200 to-white border-b-10 border-r-10 border-l-10 border-white pt-10 px-6 sm:px-12 md:px-24">
+  <p className="mt-4 text-lg sm:text-xl md:text-2xl text-gray-800 leading-relaxed">
+    My journey in technology is driven by a passion for <strong>efficiency, scalability, and problem-solving</strong>.
+    I believe in <strong>leveraging automation and cloud-native solutions</strong> to streamline workflows and optimize system performance.
+    Staying up to date with emerging technologies is a key part of my approach, ensuring I bring <strong>innovative and reliable solutions</strong> to every challenge.
+  </p>
+  <p className="mt-4 text-lg sm:text-xl md:text-2xl text-gray-800 leading-relaxed">
+    Beyond my technical expertise, I thrive on <strong>collaboration, mentorship, and continuous learning</strong>.
+    Whether it's <strong>designing robust infrastructure, implementing security best practices, or fine-tuning deployments</strong>,
+    I strive to build systems that are <strong>resilient, scalable, and future-proof</strong>.
+  </p>
+  <p className="mt-4 text-lg sm:text-xl md:text-2xl text-gray-800 leading-relaxed">
+    Explore my work and see what I’ve built
+    <Link to="/projects" className="text-blue-600 font-medium hover:underline hover:text-blue-700 transition-colors">
+      . Check out my projects.
+    </Link>
+  </p>
+</div>
       </div>
     </div>
   );

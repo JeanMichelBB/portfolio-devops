@@ -20,7 +20,7 @@ import Terraform from './pages/Terraform';
 import Ansible from './pages/Ansible';
 import Cloud from './pages/Cloud';
 import CICD from './pages/CICD';
-import Project from './pages/Project';
+import Projects from './pages/Projects';
 
 const App = () => {
   return (
@@ -47,7 +47,7 @@ const App = () => {
             <Route path="/ansible" element={<Ansible />} />
             <Route path="/cloud" element={<Cloud />} />
             <Route path="/cicd" element={<CICD />} />
-            <Route path="/project" element={<Project />} />
+            <Route path="/projects" element={<Projects />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>

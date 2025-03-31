@@ -17,67 +17,100 @@ const Footer = () => (
                             title: "Git",
                             link: "/git",
                             docs: "https://git-scm.com/doc",
-                            description: "Version Control"
+                            descriptions: [
+                                { text: "Version Control Basics", url: "https://git-scm.com/doc" },
+                                { text: "Branching & Merging Strategies", url: "https://git-scm.com/doc" }
+                            ]
                         },
                         {
                             title: "Python",
                             link: "/python",
-                            docs: "https://www.python.org/doc/",
-                            description: "Programming"
+                            docs: "https://docs.python.org/3/",
+                            descriptions: [
+                                { text: "Core Programming Concepts", url: "https://docs.python.org/3/" },
+                                { text: "Object-Oriented Programming", url: "https://docs.python.org/3/tutorial/classes.html" }
+                            ]
                         },
                         {
                             title: "Docker",
                             link: "/docker",
-                            docs: "https://www.docker.com/resources/what-container",
-                            description: "Containers"
+                            docs: "https://docs.docker.com/get-started/",
+                            descriptions: [
+                                { text: "Introduction to Containers", url: "https://docs.docker.com/get-started/" },
+                                { text: "Docker Images & Containers", url: "https://docs.docker.com/get-started/part2/" }
+                            ]
                         },
                         {
                             title: "Kubernetes",
                             link: "/kubernetes",
                             docs: "https://kubernetes.io/docs/",
-                            description: "Orchestration"
+                            descriptions: [
+                                { text: "Cluster Management & Architecture", url: "https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/" },
+                                { text: "Deploying Applications", url: "https://kubernetes.io/docs/tutorials/kubernetes-basics/deploy-app/deploy-intro/" }
+                            ]
                         },
                         {
                             title: "Monitoring",
                             link: "/monitoring",
-                            docs: "https://prometheus.io/docs/",
-                            description: "Monitoring"
+                            docs: "https://prometheus.io/docs/introduction/overview/",
+                            descriptions: [
+                                { text: "Introduction to Prometheus", url: "https://prometheus.io/docs/introduction/overview/" },
+                                { text: "Setting Up Metrics & Alerts", url: "https://prometheus.io/docs/alerting/latest/alertmanager/" }
+                            ]
                         },
                         {
                             title: "NGINX",
                             link: "/nginx",
                             docs: "https://www.nginx.com/resources/",
-                            description: "Web Server"
+                            descriptions: [
+                                { text: "Web Server & Reverse Proxy Setup", url: "https://www.nginx.com/resources/" },
+                                { text: "Load Balancing & Caching", url: "https://www.nginx.com/resources/" }
+                            ]
                         },
                         {
                             title: "Terraform",
                             link: "/terraform",
                             docs: "https://www.terraform.io/docs",
-                            description: "Infrastructure"
+                            descriptions: [
+                                { text: "Infrastructure as Code", url: "https://www.terraform.io/docs" },
+                                { text: "Terraform Modules & Providers", url: "https://www.terraform.io/docs/modules/index.html" }
+                            ]
                         },
                         {
                             title: "Ansible",
                             link: "/ansible",
                             docs: "https://docs.ansible.com/ansible/latest/index.html",
-                            description: "Automation"
+                            descriptions: [
+                                { text: "Automation & Configuration Management", url: "https://docs.ansible.com/ansible/latest/index.html" },
+                                { text: "Playbooks & Roles", url: "https://docs.ansible.com/ansible/latest/user_guide/playbooks.html" }
+                            ]
                         },
                         {
                             title: "CI/CD",
                             link: "/cicd",
                             docs: "https://www.jenkins.io/doc/",
-                            description: "CI/CD"
+                            descriptions: [
+                                { text: "Continuous Integration & Deployment", url: "https://www.jenkins.io/doc/" },
+                                { text: "Building Pipelines with Jenkins", url: "https://www.jenkins.io/doc/book/pipeline/" }
+                            ]
                         },
                         {
-                            title: "Cloud",
+                            title: "Cloud Computing",
                             link: "/cloud",
                             docs: "https://aws.amazon.com/documentation/",
-                            description: "Cloud Services"
+                            descriptions: [
+                                { text: "Cloud Infrastructure & Services", url: "https://aws.amazon.com/documentation/" },
+                                { text: "AWS EC2 & Storage", url: "https://aws.amazon.com/ec2/" }
+                            ]
                         },
                         {
                             title: "Networking",
                             link: "/networking",
                             docs: "https://www.wireshark.org/docs/",
-                            description: "Packet Analysis"
+                            descriptions: [
+                                { text: "Network Protocols & Packet Analysis", url: "https://www.wireshark.org/docs/" },
+                                { text: "Wireshark for Troubleshooting", url: "https://www.wireshark.org/docs/" }
+                            ]
                         }
                     ].map((item, index) => (
                         <div key={index}>
@@ -86,11 +119,18 @@ const Footer = () => (
                                     <Link to={item.link} className="text-sm font-semibold hover:text-blue-500" onClick={() => window.scrollTo(0, 0)}>
                                         {item.title}
                                     </Link>
-                                    <p className="text-xs">
-                                        <a href={item.docs} target="_blank" rel="noopener noreferrer" className="hover:text-blue-500">
-                                            {item.description}
-                                        </a>
-                                    </p>
+                                    {item.descriptions.map((desc, idx) => (
+                                        <p key={idx} className="text-xs">
+                                            <Link
+                                                to={desc.url}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="hover:text-blue-500"
+                                            >
+                                                {desc.text}
+                                            </Link>
+                                        </p>
+                                    ))}
                                 </li>
                             </ul>
                         </div>
@@ -102,7 +142,7 @@ const Footer = () => (
         {/* Navigation Links */}
         <nav className="mt-4">
             <ul className="flex flex-wrap justify-center gap-4 p-2 text-sm">
-                {["Home", "About", "Contact", "Project"].map((item, index) => (
+                {["Home", "About", "Contact", "Projects"].map((item, index) => (
                     <li key={index}>
                         <Link
                             to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
