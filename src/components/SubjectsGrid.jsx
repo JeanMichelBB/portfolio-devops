@@ -13,7 +13,7 @@ import ansible from '../assets/ansible.jpg';
 import cloud from '../assets/cloud.jpg';
 import cicd from '../assets/cicd.jpg';
 
-// Subject data
+
 const subjects = [
     { name: "Linux", path: "/linux-bash", description: "Learn about Linux and its powerful command-line interface.", image: linux, bg: "bg-green-200" },
     { name: "Git", path: "/git", description: "Version control with Git for collaborative development.", image: git, bg: "bg-red-200" },
@@ -32,18 +32,20 @@ const subjects = [
 const SubjectsGrid = () => {
     const navigate = useNavigate();
 
-    // Store the scroll position before navigating
+    
     const handleLinkClick = (path) => {
-        sessionStorage.setItem('scrollPosition', window.scrollY); // Store scroll position
-        navigate(path); // Navigate to the selected subject
+        sessionStorage.setItem('scrollPosition', window.scrollY); 
+        navigate(path); 
     };
 
     useEffect(() => {
-        // Restore the scroll position when the component loads
         const savedPosition = sessionStorage.getItem('scrollPosition');
-        if (savedPosition) {
-            window.scrollTo(0, parseInt(savedPosition)); // Scroll back to the saved position
-            sessionStorage.removeItem('scrollPosition'); // Clear the scroll position after using it
+
+        if (window.location.hash === '' || window.location.hash === '#/') {
+            window.scrollTo(0, 0);
+        } else if (savedPosition) {
+            window.scrollTo(0, parseInt(savedPosition)); 
+            sessionStorage.removeItem('scrollPosition'); 
         }
     }, []);
 
@@ -52,7 +54,7 @@ const SubjectsGrid = () => {
             {subjects.map((subject, index) => (
                 <div key={index} className={`relative ${subject.bg} border-[5px] border-white flex`}>
                     <button
-                        onClick={() => handleLinkClick(subject.path)} // Navigate and store scroll position
+                        onClick={() => handleLinkClick(subject.path)} 
                         className="block hover:underline z-10 relative w-full h-full p-4"
                     >
                         <div className="flex w-full flex-col md:flex-row">
