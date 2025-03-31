@@ -1,14 +1,16 @@
 import React from 'react';
+import ContactComponent from '../components/ContactComponent';
 import { Link } from 'react-router-dom';
 
 const Footer = () => (
     <footer className="bg-gray-100 opacity-90 text-center py-6 mt-auto px-4">
+        <ContactComponent />
         <div className="m-4">
-            <div className="text-left mx-auto max-w-4xl">
-                <h3 className="font-semibold text-lg mb-4 text-center">Technologies & Services</h3>
-                
+            <div className="text-left mx-auto max-w-4xl border-t border-gray-300">
+                <h3 className="font-semibold text-sm mb-4 pt-6 ">Technologies & Services</h3>
+
                 {/* Responsive Grid */}
-                <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-6 border-b border-gray-300 pb-6">
+                <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-6 border-b border-gray-300 pb-6 pl-8">
                     {/** Technology Categories **/}
                     {[
                         {
@@ -100,14 +102,18 @@ const Footer = () => (
         {/* Navigation Links */}
         <nav className="mt-4">
             <ul className="flex flex-wrap justify-center gap-4 p-2 text-sm">
-                {["Home", "About", "Contact", "Services", "Blog", "Portfolio"].map((item, index) => (
+                {["Home", "About", "Contact", "Project"].map((item, index) => (
                     <li key={index}>
-                        <Link to={`/${item.toLowerCase()}`} className="hover:text-blue-500">{item}</Link>
+                        <Link
+                            to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
+                            className="hover:text-blue-500"
+                        >
+                            {item}
+                        </Link>
                     </li>
                 ))}
             </ul>
         </nav>
-
         {/* Social Media Links */}
         <div className="flex justify-center gap-4 mt-4">
             <a href="https://github.com/JeanMichelBB" target="_blank" rel="noopener noreferrer" className="text-sm hover:text-blue-500">GitHub</a>

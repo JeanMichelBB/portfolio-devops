@@ -15,7 +15,7 @@ const Kubernetes = () => {
       }`}
     >
       <h1 className="text-4xl font-bold text-gray-800 mb-4">Kubernetes</h1>
-      <p className="text-lg text-gray-700 max-w-2xl mx-auto">
+      <p className="text-lg text-gray-700 max-w-2xl mx-auto p-3">
         This page contains information about Kubernetes. Here, you can learn more
         about Kubernetes, its uses, and how it can help you in your work.
       </p>

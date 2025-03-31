@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
+import NotFound from "./pages/NotFound";
 
 // Import all the subject components
 import Linux from './pages/Linux';
@@ -19,6 +20,7 @@ import Terraform from './pages/Terraform';
 import Ansible from './pages/Ansible';
 import Cloud from './pages/Cloud';
 import CICD from './pages/CICD';
+import Project from './pages/Project';
 
 const App = () => {
   return (
@@ -45,6 +47,8 @@ const App = () => {
             <Route path="/ansible" element={<Ansible />} />
             <Route path="/cloud" element={<Cloud />} />
             <Route path="/cicd" element={<CICD />} />
+            <Route path="/project" element={<Project />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
         <Footer />
