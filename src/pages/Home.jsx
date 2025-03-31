@@ -58,23 +58,23 @@ const Home = () => {
           <Carousel />
         </div>
         <div className="text-lg text-gray-700 mx-auto bg-gradient-to-b from-cyan-200 to-white border-b-10 border-r-10 border-l-10 border-white pt-10 px-6 sm:px-12 md:px-24">
-  <p className="mt-4 text-lg sm:text-xl md:text-2xl text-gray-800 leading-relaxed">
-    My journey in technology is driven by a passion for <strong>efficiency, scalability, and problem-solving</strong>.
-    I believe in <strong>leveraging automation and cloud-native solutions</strong> to streamline workflows and optimize system performance.
-    Staying up to date with emerging technologies is a key part of my approach, ensuring I bring <strong>innovative and reliable solutions</strong> to every challenge.
-  </p>
-  <p className="mt-4 text-lg sm:text-xl md:text-2xl text-gray-800 leading-relaxed">
-    Beyond my technical expertise, I thrive on <strong>collaboration, mentorship, and continuous learning</strong>.
-    Whether it's <strong>designing robust infrastructure, implementing security best practices, or fine-tuning deployments</strong>,
-    I strive to build systems that are <strong>resilient, scalable, and future-proof</strong>.
-  </p>
-  <p className="mt-4 text-lg sm:text-xl md:text-2xl text-gray-800 leading-relaxed">
-    Explore my work and see what I’ve built
-    <Link to="/projects" className="text-blue-600 font-medium hover:underline hover:text-blue-700 transition-colors">
-      . Check out my projects.
-    </Link>
-  </p>
-</div>
+          <p className="mt-4 text-lg sm:text-xl md:text-lg text-gray-800 leading-relaxed">
+            My journey in technology is driven by a passion for <strong>efficiency, scalability, and problem-solving</strong>.
+            I believe in <strong>leveraging automation and cloud-native solutions</strong> to streamline workflows and optimize system performance.
+            Staying up to date with emerging technologies is a key part of my approach, ensuring I bring <strong>innovative and reliable solutions</strong> to every challenge.
+          </p>
+          <p className="mt-4 text-lg sm:text-xl md:text-lg text-gray-800 leading-relaxed">
+            Beyond my technical expertise, I thrive on <strong>collaboration, mentorship, and continuous learning</strong>.
+            Whether it's <strong>designing robust infrastructure, implementing security best practices, or fine-tuning deployments</strong>,
+            I strive to build systems that are <strong>resilient, scalable, and future-proof</strong>.
+          </p>
+          <p className="mt-4 text-lg sm:text-xl md:text-lg text-gray-800 leading-relaxed">
+            Explore my work and see what I’ve built
+            <Link to="/projects" className="text-blue-600 font-medium hover:underline hover:text-blue-700 transition-colors">
+              . Check out my projects.
+            </Link>
+          </p>
+        </div>
       </div>
     </div>
   );
