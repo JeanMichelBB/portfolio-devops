@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import git from '../assets/git.jpg';
 import linux from '../assets/linux.jpg';
 import python from '../assets/python.jpg';
@@ -30,22 +30,30 @@ const subjects = [
 ];
 
 const SubjectsGrid = () => {
-    const location = useLocation();
+    const navigate = useNavigate();
 
-    const handleClick = (path) => {
-        // Save current scroll position
-        sessionStorage.setItem("scrollPosition", window.scrollY);
-        sessionStorage.setItem("previousPath", location.pathname);
+    // Store the scroll position before navigating
+    const handleLinkClick = (path) => {
+        sessionStorage.setItem('scrollPosition', window.scrollY); // Store scroll position
+        navigate(path); // Navigate to the selected subject
     };
+
+    useEffect(() => {
+        // Restore the scroll position when the component loads
+        const savedPosition = sessionStorage.getItem('scrollPosition');
+        if (savedPosition) {
+            window.scrollTo(0, parseInt(savedPosition)); // Scroll back to the saved position
+            sessionStorage.removeItem('scrollPosition'); // Clear the scroll position after using it
+        }
+    }, []);
 
     return (
         <div className="grid grid-cols-1 md:grid-cols-2 w-full border-[5px] border-white">
             {subjects.map((subject, index) => (
                 <div key={index} className={`relative ${subject.bg} border-[5px] border-white flex`}>
-                    <Link 
-                        to={subject.path} 
-                        className="block hover:underline z-10 relative w-full h-full p-4" 
-                        onClick={() => handleClick(subject.path)}
+                    <button
+                        onClick={() => handleLinkClick(subject.path)} // Navigate and store scroll position
+                        className="block hover:underline z-10 relative w-full h-full p-4"
                     >
                         <div className="flex w-full flex-col md:flex-row">
                             {/* Image */}
@@ -64,7 +72,7 @@ const SubjectsGrid = () => {
                                 <p className="text-lg mt-2">{subject.description}</p>
                             </div>
                         </div>
-                    </Link>
+                    </button>
                 </div>
             ))}
         </div>

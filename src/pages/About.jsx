@@ -1,26 +1,13 @@
 // src/pages/About.jsx
 import React, { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
 
 const About = () => {
-  const location = useLocation();
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const previousPath = sessionStorage.getItem("previousPath");
-    const savedPosition = sessionStorage.getItem("scrollPosition");
-
-    if (savedPosition && previousPath && location.pathname !== previousPath) {
-      window.scrollTo(0, parseInt(savedPosition, 10));
-      sessionStorage.removeItem("scrollPosition");
-      sessionStorage.removeItem("previousPath");
-    } else {
-      setTimeout(() => {
-        window.scrollTo(0, 0);
-      }, 0);
-    }
+    window.scrollTo(0, 0);
     setTimeout(() => setIsVisible(true), 100);
-  }, [location]);
+  }, []);
 
   return (
     <div className={`min-h-screen text-center py-10 transition-all duration-500 ${isVisible ? "opacity-100" : "opacity-0"}`}>
