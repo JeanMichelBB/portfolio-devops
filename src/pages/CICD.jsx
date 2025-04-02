@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import CICDFundamental from "../components/CICDFundamental";
+import cicd from "../assets/cicd.jpg"; // Adjust the path as necessary
 
 const CICD = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -10,48 +12,72 @@ const CICD = () => {
 
   return (
     <div
-      className={`min-h-screen text-left max-w-3xl mx-auto py-10 transition-all duration-500 p-8 ${
-        isVisible ? "opacity-100" : "opacity-0"
-      }`}
+      className={`duration-500 min-h-screen ${isVisible ? "opacity-100" : "opacity-0"}
+            bg-[length:250px_250px] sm:bg-[length:300px_300px] md:bg-[length:400px_400px] lg:bg-[length:500px_500px]
+            bg-[position:120%_105%] sm:bg-[position:85%_130%] md:bg-[position:85%_130%]`}
+      style={{
+        backgroundImage: `url(${cicd})`,
+        backgroundRepeat: "no-repeat",
+      }}
     >
-      <h1 className="text-4xl font-bold text-gray-800 mb-6 text-center">CICD</h1>
+      <div
+        className={`min-h-screen text-left max-w-3xl mx-auto py-10 transition-all duration-500 p-8 ${isVisible ? "opacity-100" : "opacity-0"
+          }`}
+      >
+        <h1 className="text-4xl font-bold text-gray-800 mb-6 text-center">CI/CD</h1>
 
-      <section className="mb-6">
-        <h2 className="text-2xl font-semibold text-gray-800 mb-2">What is CICD?</h2>
-        <p className="text-lg text-gray-700 leading-relaxed">
-          CICD stands for Continuous Integration and Continuous Deployment, a set of practices designed to help software teams deliver high-quality applications rapidly. 
-          These practices automate the steps involved in integrating, testing, and deploying software, allowing for faster and more reliable development cycles.
-        </p>
-      </section>
+        {/* Fundamental Concepts (Collapsible with Animation) */}
+        <CICDFundamental />
 
-      <section className="mb-6">
-        <h2 className="text-2xl font-semibold text-gray-800 mb-2">Continuous Integration (CI)</h2>
-        <p className="text-lg text-gray-700 leading-relaxed">
-          Continuous Integration (CI) focuses on automating the process of integrating new code changes into a shared codebase. Every time a developer commits new code,
-          the code is automatically tested to ensure that it works correctly and doesn’t introduce any bugs. Tools like <strong>Jenkins</strong>, <strong>GitLab CI</strong>, and
-          <strong> Travis CI</strong> are commonly used for implementing CI pipelines.
-        </p>
-      </section>
+        {/*  Essential for Recruiters */}
+        <section className="mb-8">
+          <h2 className="text-2xl font-semibold text-gray-700 mb-2">My Experience with CI/CD</h2>
+          <p className="text-gray-600">
+            I have set up **CI/CD pipelines** for **____ (describe your project, e.g., automating deployment for a web app)**.
+            This involved using **____ (technologies: GitHub Actions, Jenkins, GitLab CI, CircleCI)** to automate testing and deployment workflows.
+          </p>
+          <p className="text-gray-600">
+            A major challenge I encountered was **____ (describe a problem: slow build times, deployment failures, etc.)**.
+            I resolved it by **____ (solution: optimizing pipeline steps, parallelizing tests, introducing caching, etc.)**.
+          </p>
+        </section>
 
-      <section className="mb-6">
-        <h2 className="text-2xl font-semibold text-gray-800 mb-2">Continuous Deployment (CD)</h2>
-        <p className="text-lg text-gray-700 leading-relaxed">
-          Continuous Deployment (CD) takes CI to the next level by automating the deployment process. Every time the code passes all the tests in the CI pipeline, it is automatically
-          deployed to the production environment. This ensures that new features, improvements, and fixes are delivered to users quickly and without manual intervention. 
-          Tools like <strong>Docker</strong>, <strong>Kubernetes</strong>, and <strong>AWS</strong> often play a key role in Continuous Deployment.
-        </p>
-      </section>
+        <section className="mb-8">
+          <h2 className="text-2xl font-semibold text-gray-700 mb-2">Real-World Implementation (Projects)</h2>
+          <p className="text-gray-600">
+            <strong>Project:</strong> **____ (Project Name, e.g., "Automated CI/CD for Web App")**
+            <strong>Description:</strong> **____ (How you used CI/CD in this project)**
+            <strong>Link:</strong> <a href="____ (GitHub or Live Demo URL)" className="text-blue-600">View on GitHub</a>
+          </p>
+        </section>
 
-      <section className="mb-6">
-        <h2 className="text-2xl font-semibold text-gray-800 mb-2">Benefits of CICD</h2>
-        <ul className="list-disc list-inside text-lg text-gray-700 leading-relaxed">
-          <li>Improved software quality with automated testing.</li>
-          <li>Faster development cycles and quicker delivery of features.</li>
-          <li>Reduced manual intervention in the deployment process.</li>
-          <li>Early detection of bugs and errors through automated testing.</li>
-          <li>Improved collaboration among development, testing, and operations teams.</li>
-        </ul>
-      </section>
+        <section className="mb-8">
+          <h2 className="text-2xl font-semibold text-gray-700 mb-2">Integration with Other Technologies</h2>
+          <ul className="list-disc pl-5 text-gray-600">
+            <li><strong>Version Control:</strong> Used Git and GitHub/GitLab for source control and collaboration.</li>
+            <li><strong>Docker:</strong> Integrated Docker for containerization in the CI/CD pipeline.</li>
+            <li><strong>Cloud Deployments:</strong> Deployed applications to **____ (AWS, Azure, Google Cloud, etc.)** via automated CI/CD processes.</li>
+            <li><strong>Monitoring:</strong> Integrated **____ (Prometheus, Grafana, etc.)** to monitor CI/CD pipelines and application performance.</li>
+          </ul>
+        </section>
+
+        <section className="mb-8">
+          <h2 className="text-2xl font-semibold text-gray-700 mb-2">Best Practices & Troubleshooting</h2>
+          <ul className="list-disc pl-5 text-gray-600">
+            <li><strong>Pipeline Optimization:</strong> Reduced build times by caching dependencies and using parallel jobs.</li>
+            <li><strong>Error Handling:</strong> Added retry logic and alerts for pipeline failures.</li>
+            <li><strong>Security:</strong> Implemented secret management and vulnerability scanning in CI/CD pipelines.</li>
+          </ul>
+        </section>
+
+        <section className="mb-8 pb-20">
+          <h2 className="text-2xl font-semibold text-gray-700 mb-2">Resources & Further Learning</h2>
+          <ul className="list-disc pl-5 text-gray-600">
+            <li><a href="https://www.atlassian.com/continuous-delivery" target="_blank" rel="noopener noreferrer" className="text-blue-600">CI/CD Overview (Atlassian)</a></li>
+            <li><a href="https://docs.github.com/en/actions" target="_blank" rel="noopener noreferrer" className="text-blue-600">GitHub Actions Documentation</a></li>
+          </ul>
+        </section>
+      </div>
     </div>
   );
 };

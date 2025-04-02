@@ -14,6 +14,15 @@ const Footer = () => (
                     {/** Technology Categories **/}
                     {[
                         {
+                            title: "Linux",
+                            link: "/linux-bash",
+                            docs: "https://www.kernel.org/doc/html/latest/",
+                            descriptions: [
+                                { text: "Linux Basics & Commands", url: "https://www.kernel.org/doc/html/latest/" },
+                                { text: "File System Hierarchy", url: "https://www.kernel.org/doc/html/latest/" }
+                            ]
+                        },
+                        {
                             title: "Git",
                             link: "/git",
                             docs: "https://git-scm.com/doc",
@@ -77,12 +86,12 @@ const Footer = () => (
                             ]
                         },
                         {
-                            title: "Ansible",
-                            link: "/ansible",
-                            docs: "https://docs.ansible.com/ansible/latest/index.html",
+                            title: "Cloud Computing",
+                            link: "/cloud",
+                            docs: "https://aws.amazon.com/documentation/",
                             descriptions: [
-                                { text: "Automation & Configuration Management", url: "https://docs.ansible.com/ansible/latest/index.html" },
-                                { text: "Playbooks & Roles", url: "https://docs.ansible.com/ansible/latest/user_guide/playbooks.html" }
+                                { text: "Cloud Infrastructure & Services", url: "https://aws.amazon.com/documentation/" },
+                                { text: "AWS EC2 & Storage", url: "https://aws.amazon.com/ec2/" }
                             ]
                         },
                         {
@@ -95,12 +104,12 @@ const Footer = () => (
                             ]
                         },
                         {
-                            title: "Cloud Computing",
-                            link: "/cloud",
-                            docs: "https://aws.amazon.com/documentation/",
+                            title: "Ansible",
+                            link: "/ansible",
+                            docs: "https://docs.ansible.com/ansible/latest/index.html",
                             descriptions: [
-                                { text: "Cloud Infrastructure & Services", url: "https://aws.amazon.com/documentation/" },
-                                { text: "AWS EC2 & Storage", url: "https://aws.amazon.com/ec2/" }
+                                { text: "Automation & Configuration Management", url: "https://docs.ansible.com/ansible/latest/index.html" },
+                                { text: "Playbooks & Roles", url: "https://docs.ansible.com/ansible/latest/user_guide/playbooks.html" }
                             ]
                         },
                         {

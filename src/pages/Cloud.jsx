@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
-
+import CloudFundamental from "../components/CloudFundamental";
+import cloud from "../assets/cloud.jpg";
 const Cloud = () => {
   const [isVisible, setIsVisible] = useState(false);
+
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -10,57 +12,75 @@ const Cloud = () => {
 
   return (
     <div
-      className={`min-h-screen text-left max-w-3xl mx-auto py-10 transition-all duration-500 p-8 ${
-        isVisible ? "opacity-100" : "opacity-0"
-      }`}
+      className={`duration-500 min-h-screen ${isVisible ? "opacity-100" : "opacity-0"}
+            bg-[length:250px_250px] sm:bg-[length:300px_300px] md:bg-[length:400px_400px] lg:bg-[length:500px_500px]
+            bg-[position:120%_105%] sm:bg-[position:85%_130%] md:bg-[position:85%_130%]`}
+      style={{
+        backgroundImage: `url(${cloud})`,
+        backgroundRepeat: "no-repeat",
+      }}
     >
-      <h1 className="text-4xl font-bold text-gray-800 mb-6 text-center">Cloud Computing</h1>
+      <div
+        className={`min-h-screen text-left max-w-3xl mx-auto py-10 transition-all duration-500 p-8 ${isVisible ? "opacity-100" : "opacity-0"
+          }`}
+      >
+        <h1 className="text-4xl font-bold text-gray-800 mb-6 text-center">Cloud Computing</h1>
 
-      <section className="mb-6">
-        <h2 className="text-2xl font-semibold text-gray-800 mb-2">Cloud Platforms</h2>
-        <p className="text-lg text-gray-700 leading-relaxed">
-          I have hands-on experience working with various cloud platforms like
-          <strong> AWS, Google Cloud, and Microsoft Azure</strong>. I specialize in
-          deploying, managing, and scaling applications in the cloud, leveraging
-          the full potential of cloud-native services.
-        </p>
-      </section>
+        <CloudFundamental />
 
-      <section className="mb-6">
-        <h2 className="text-2xl font-semibold text-gray-800 mb-2">Infrastructure as Code (IaC)</h2>
-        <p className="text-lg text-gray-700 leading-relaxed">
-          I use tools like <strong>Terraform</strong> and <strong>CloudFormation</strong> to automate infrastructure provisioning, enabling efficient
-          management of cloud resources and ensuring consistency across multiple
-          environments.
-        </p>
-      </section>
+        {/* Essential for Recruiters */}
+        <section className="mb-8">
+          <h2 className="text-2xl font-semibold text-gray-700 mb-2">My Experience with Cloud Computing</h2>
+          <p className="text-gray-600">
+            I have used cloud platforms such as **AWS** and **Azure** in **____ (describe your project, e.g., deploying a scalable web application, setting up a serverless architecture, etc.)**.
+            This included working with **____ (technologies: EC2, Lambda, S3, Kubernetes, etc.)**.
+          </p>
+          <p className="text-gray-600">
+            One of the challenges I faced was **____ (describe the challenge: network configuration, security, cost optimization, etc.)**.
+            To solve it, I **____ (solution: implemented auto-scaling, used cloud-native security practices, leveraged cost-saving features, etc.)**.
+          </p>
+        </section>
 
-      <section className="mb-6">
-        <h2 className="text-2xl font-semibold text-gray-800 mb-2">Containerization and Orchestration</h2>
-        <p className="text-lg text-gray-700 leading-relaxed">
-          I leverage <strong>Docker</strong> and <strong>Kubernetes</strong> for containerizing applications and orchestrating their deployment in cloud
-          environments, enabling scalability, resilience, and fault tolerance.
-        </p>
-      </section>
+        {/* Real-World Implementation (Projects) */}
+        <section className="mb-8">
+          <h2 className="text-2xl font-semibold text-gray-700 mb-2">Real-World Projects</h2>
+          <p className="text-gray-600">
+            <strong>Project:</strong> **____ (Project Name, e.g., "Multi-Cloud Application Deployment")**
+            <strong>Description:</strong> **____ (How you utilized cloud computing in the project)**
+            <strong>Link:</strong> <a href="____ (GitHub or Live Demo URL)" className="text-blue-600">View on GitHub</a>
+          </p>
+        </section>
 
-      <section className="mb-6">
-        <h2 className="text-2xl font-semibold text-gray-800 mb-2">Cloud Security</h2>
-        <p className="text-lg text-gray-700 leading-relaxed">
-          I ensure that cloud infrastructures are secure by implementing best
-          practices such as role-based access control (RBAC), data encryption, and
-          network security configurations. I am well-versed in securing cloud
-          applications and managing compliance with industry standards.
-        </p>
-      </section>
+        {/* Integration with Other Technologies */}
+        <section className="mb-8">
+          <h2 className="text-2xl font-semibold text-gray-700 mb-2">Integration with Other Technologies</h2>
+          <ul className="list-disc pl-5 text-gray-600">
+            <li><strong>CI/CD Pipelines:</strong> Integrated cloud resources with CI/CD tools like **GitHub Actions**, **Jenkins**, etc., for seamless deployments.</li>
+            <li><strong>Microservices:</strong> Deployed microservices in cloud environments using **Kubernetes**, **Docker Swarm**, etc.</li>
+            <li><strong>Database as a Service:</strong> Utilized managed database services like **Amazon RDS**, **Azure SQL**, etc., for scalable database solutions.</li>
+          </ul>
+        </section>
 
-      <section>
-        <h2 className="text-2xl font-semibold text-gray-800 mb-2">CI/CD in Cloud</h2>
-        <p className="text-lg text-gray-700 leading-relaxed">
-          I integrate continuous integration and continuous deployment (CI/CD) in
-          the cloud environment to automate testing, deployment, and scaling of
-          applications, ensuring faster and more reliable delivery of software.
-        </p>
-      </section>
+        {/* Best Practices & Troubleshooting */}
+        <section className="mb-8">
+          <h2 className="text-2xl font-semibold text-gray-700 mb-2">Best Practices & Troubleshooting</h2>
+          <ul className="list-disc pl-5 text-gray-600">
+            <li><strong>Cost Optimization:</strong> Used auto-scaling and reserved instances to reduce cloud costs.</li>
+            <li><strong>Security:</strong> Applied cloud-native security practices like encryption, IAM policies, and VPC isolation.</li>
+            <li><strong>Monitoring:</strong> Set up cloud monitoring tools such as **CloudWatch** (AWS), **Azure Monitor**, and **Stackdriver** to ensure uptime and reliability.</li>
+          </ul>
+        </section>
+
+        {/* Resources & Further Learning */}
+        <section className="mb-8 pb-10">
+          <h2 className="text-2xl font-semibold text-gray-700 mb-2">Resources & Further Learning</h2>
+          <ul className="list-disc pl-5 text-gray-600">
+            <li><a href="https://aws.amazon.com/training/" target="_blank" rel="noopener noreferrer" className="text-blue-600">AWS Training and Certification</a></li>
+            <li><a href="https://learn.microsoft.com/en-us/training/azure/" target="_blank" rel="noopener noreferrer" className="text-blue-600">Azure Learning Path</a></li>
+            <li><a href="https://cloud.google.com/training" target="_blank" rel="noopener noreferrer" className="text-blue-600">Google Cloud Training</a></li>
+          </ul>
+        </section>
+      </div>
     </div>
   );
 };

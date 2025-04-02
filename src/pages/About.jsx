@@ -1,4 +1,3 @@
-// src/pages/About.jsx
 import React, { useEffect, useState } from "react";
 
 const About = () => {
@@ -12,12 +11,38 @@ const About = () => {
   return (
     <div className={`min-h-screen text-center py-10 transition-all duration-500 ${isVisible ? "opacity-100" : "opacity-0"}`}>
       <h1 className="text-4xl font-bold text-gray-800 mb-4">About Me</h1>
+
       <p className="text-lg text-gray-700 max-w-2xl mx-auto p-3">
-        This page contains information about me. Here, you can learn more about my background, experiences, and what drives me in my work.
+        Welcome to my portfolio! I'm a passionate software developer with a love for creating impactful applications that solve real-world problems.
       </p>
-      <p className="text-lg text-gray-700 max-w-2xl mx-auto p-3">
-        Welcome to my portfolio website. Here, you can learn more about me, my projects, and my experiences. Feel free to explore the site and reach out to me if you have any inquiries or collaboration opportunities. I would love to hear from you.
-      </p>
+
+      <section className="mb-8">
+        <h2 className="text-2xl font-semibold text-gray-800 mb-3">My Background</h2>
+        <p className="text-lg text-gray-700 max-w-2xl mx-auto p-3">
+          With a background in both programming and management, I bring a unique combination of technical and leadership skills. I have worked in various industries, including IT, healthcare, and retail, helping organizations streamline their processes through custom software solutions.
+        </p>
+      </section>
+
+      <section className="mb-8">
+        <h2 className="text-2xl font-semibold text-gray-800 mb-3">Key Skills</h2>
+        <ul className="list-disc pl-5 text-lg text-gray-700 max-w-2xl mx-auto p-3">
+          <li>Full-Stack Development (React, Node.js, Python, etc.)</li>
+          <li>Docker and Containerization</li>
+          <li>Cloud Computing (AWS, Azure)</li>
+          <li>Infrastructure as Code (Terraform, Kubernetes)</li>
+          <li>Database Management (SQL, MongoDB)</li>
+          <li>DevOps and CI/CD</li>
+          <li>AI and Machine Learning</li>
+        </ul>
+      </section>
+
+      <section className="mb-8">
+        <h2 className="text-2xl font-semibold text-gray-800 mb-3">My Interests</h2>
+        <p className="text-lg text-gray-700 max-w-2xl mx-auto p-3">
+          In addition to my work, I enjoy learning about emerging technologies, contributing to open-source projects, and exploring how artificial intelligence can drive innovation. When I'm not coding, I enjoy photography, short films, and hiking.
+        </p>
+      </section>
+
     </div>
   );
 };

@@ -1,4 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
+import AnsibleFundamental from "../components/AnsibleFundamental";
+import ansible from "../assets/ansible.jpg"; // Adjust the path as necessary  
 
 const Ansible = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -10,65 +12,71 @@ const Ansible = () => {
 
   return (
     <div
-      className={`min-h-screen text-left max-w-3xl mx-auto py-10 transition-all duration-500 p-8 ${
-        isVisible ? "opacity-100" : "opacity-0"
-      }`}
+      className={`duration-500 min-h-screen ${isVisible ? "opacity-100" : "opacity-0"}
+        bg-[length:250px_250px] sm:bg-[length:300px_300px] md:bg-[length:400px_400px] lg:bg-[length:500px_500px]
+        bg-[position:120%_105%] sm:bg-[position:85%_130%] md:bg-[position:85%_130%]`}
+      style={{
+        backgroundImage: `url(${ansible})`,
+        backgroundRepeat: "no-repeat",
+      }}
     >
-      <h1 className="text-4xl font-bold text-gray-800 mb-6 text-center">Ansible</h1>
 
-      <section className="mb-6">
-        <h2 className="text-2xl font-semibold text-gray-800 mb-2">What is Ansible?</h2>
-        <p className="text-lg text-gray-700 leading-relaxed">
-          Ansible is an open-source automation platform that simplifies IT tasks such as configuration management, application deployment, and task automation. It allows system administrators and developers to define and automate the configuration of systems, services, and applications across a wide range of environments, ensuring consistency and efficiency in infrastructure management.
-        </p>
-      </section>
+      <div className={`min-h-screen text-left max-w-3xl mx-auto py-10 transition-all duration-500 p-8 ${isVisible ? "opacity-100" : "opacity-0"}`}>
+        <h1 className="text-4xl font-bold text-gray-800 mb-6 text-center">Ansible</h1>
 
-      <section className="mb-6">
-        <h2 className="text-2xl font-semibold text-gray-800 mb-2">Key Features of Ansible</h2>
-        <ul className="list-disc list-inside text-lg text-gray-700 leading-relaxed">
-          <li><strong>Simple and Easy to Use:</strong> Ansible uses YAML syntax, which is easy to read and write, making automation accessible even to non-technical users.</li>
-          <li><strong>Agentless:</strong> Ansible doesn't require agents to be installed on remote machines. It communicates over SSH or WinRM to manage systems.</li>
-          <li><strong>Idempotency:</strong> Ansible ensures that the desired state of a system is achieved, regardless of how many times the same playbook is executed.</li>
-          <li><strong>Scalability:</strong> Ansible can scale from managing a few servers to managing thousands of systems with minimal overhead.</li>
-          <li><strong>Extensive Modules:</strong> Ansible comes with a rich set of modules to automate tasks ranging from package management to cloud provisioning and more.</li>
-        </ul>
-      </section>
+        {/* 🎓 Fundamental Concepts (Collapsible with Animation) */}
+        <AnsibleFundamental />
 
-      <section className="mb-6">
-        <h2 className="text-2xl font-semibold text-gray-800 mb-2">How Ansible Works</h2>
-        <p className="text-lg text-gray-700 leading-relaxed">
-          Ansible operates on the concept of "playbooks" — YAML files that define a series of tasks to be executed on a set of remote hosts. The process of using Ansible can be summarized as follows:
-        </p>
-        <ul className="list-disc list-inside text-lg text-gray-700 leading-relaxed">
-          <li><strong>Define the Inventory:</strong> The inventory file lists the hosts or groups of hosts that Ansible will manage.</li>
-          <li><strong>Create Playbooks:</strong> Playbooks define the tasks to be executed on the managed hosts. Tasks are written in YAML and use Ansible modules.</li>
-          <li><strong>Execute the Playbook:</strong> Ansible connects to the managed hosts over SSH (or WinRM for Windows), executes the tasks, and ensures that the desired state is achieved.</li>
-        </ul>
-      </section>
+        {/* 🚀 Essential for Recruiters */}
+        <section className="mb-8">
+          <h2 className="text-2xl font-semibold text-gray-700 mb-2">My Experience with Ansible</h2>
+          <p className="text-gray-600">
+            I have used Ansible in **____ (describe your project, e.g., provisioning servers, configuring databases, automating deployments)**.
+            This included **____ (technologies used: Nginx, PostgreSQL, Docker, Kubernetes, etc.)**.
+          </p>
+          <p className="text-gray-600">
+            One major challenge I solved was **____ (describe a problem: managing secrets, setting up Ansible vault, automating multi-server deployments, etc.)**.
+            I addressed it by **____ (solution: using dynamic inventories, modular roles, optimizing playbooks, etc.)**.
+          </p>
+        </section>
 
-      <section className="mb-6">
-        <h2 className="text-2xl font-semibold text-gray-800 mb-2">Use Cases of Ansible</h2>
-        <ul className="list-disc list-inside text-lg text-gray-700 leading-relaxed">
-          <li><strong>Configuration Management:</strong> Automating the configuration of servers, software packages, and services to ensure consistency.</li>
-          <li><strong>Application Deployment:</strong> Streamlining the process of deploying applications to multiple servers, reducing manual intervention.</li>
-          <li><strong>Infrastructure as Code (IaC):</strong> Ansible allows you to treat your infrastructure as code, enabling version control and easy reproducibility.</li>
-          <li><strong>Continuous Integration/Continuous Deployment (CI/CD):</strong> Ansible can be used to automate the entire CI/CD pipeline, from code compilation to deployment.</li>
-          <li><strong>Cloud Provisioning:</strong> Automating the provisioning and management of cloud resources on platforms like AWS, Azure, and Google Cloud.</li>
-        </ul>
-      </section>
+        <section className="mb-8">
+          <h2 className="text-2xl font-semibold text-gray-700 mb-2">Real-World Implementation (Projects)</h2>
+          <p className="text-gray-600">
+            <strong>Project:</strong> **____ (Project Name, e.g., "Automated Server Provisioning with Ansible")**
+            <strong>Description:</strong> **____ (How you used Ansible in this project)**
+            <strong>Link:</strong> <a href="____ (GitHub or Live Demo URL)" className="text-blue-600">View on GitHub</a>
+          </p>
+        </section>
 
-      <section className="mb-6">
-        <h2 className="text-2xl font-semibold text-gray-800 mb-2">Getting Started with Ansible</h2>
-        <p className="text-lg text-gray-700 leading-relaxed">
-          To get started with Ansible, you'll need to install it on your control machine (the machine from which you'll run your playbooks). Ansible can be installed via package managers like apt, yum, or pip, or by using the official installation instructions. After installation, you'll need to set up an inventory file and create your first playbook to automate tasks.
-        </p>
-        <ul className="list-disc list-inside text-lg text-gray-700 leading-relaxed">
-          <li><strong>Step 1:</strong> Install Ansible using the package manager or via pip.</li>
-          <li><strong>Step 2:</strong> Create an inventory file listing the hosts you want to manage.</li>
-          <li><strong>Step 3:</strong> Write your first playbook to automate a simple task, such as installing a package.</li>
-          <li><strong>Step 4:</strong> Run the playbook with the "ansible-playbook" command and see the results.</li>
-        </ul>
-      </section>
+        <section className="mb-8">
+          <h2 className="text-2xl font-semibold text-gray-700 mb-2">Integration with Other Technologies</h2>
+          <ul className="list-disc pl-5 text-gray-600">
+            <li><strong>CI/CD Pipelines:</strong> Automated infrastructure deployment using **____ (Jenkins, GitHub Actions, etc.)**.</li>
+            <li><strong>Cloud Infrastructure:</strong> Used Ansible to configure **____ (AWS EC2, Azure VMs, GCP Compute Engine, etc.)**.</li>
+            <li><strong>Container Orchestration:</strong> Deployed Kubernetes clusters with **____ (Kubeadm, Helm, etc.)**.</li>
+            <li><strong>Security & Compliance:</strong> Used **____ (Ansible Vault, automated security hardening, etc.)**.</li>
+          </ul>
+        </section>
+
+        <section className="mb-8">
+          <h2 className="text-2xl font-semibold text-gray-700 mb-2">Best Practices & Troubleshooting</h2>
+          <ul className="list-disc pl-5 text-gray-600">
+            <li><strong>Optimizing Playbooks:</strong> Used **loops and conditionals** to avoid redundant tasks.</li>
+            <li><strong>Security:</strong> Managed secrets using **Ansible Vault**.</li>
+            <li><strong>Idempotency:</strong> Ensured playbooks are repeatable and only make necessary changes.</li>
+            <li><strong>Debugging:</strong> Used `-vvvv` verbosity for detailed logs when troubleshooting.</li>
+          </ul>
+        </section>
+
+        <section className="mb-8 pb-30">
+          <h2 className="text-2xl font-semibold text-gray-700 mb-2">Resources & Further Learning</h2>
+          <ul className="list-disc pl-5 text-gray-600">
+            <li><a href="https://docs.ansible.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600">Ansible Official Documentation</a></li>
+            <li><a href="https://docs.ansible.com/ansible/latest/user_guide/playbooks_best_practices.html" target="_blank" rel="noopener noreferrer" className="text-blue-600">Best Practices for Ansible Playbooks</a></li>
+          </ul>
+        </section>
+      </div>
     </div>
   );
 };
