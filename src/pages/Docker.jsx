@@ -13,8 +13,8 @@ const Docker = () => {
   return (
     <div
       className={`duration-500 min-h-screen ${isVisible ? "opacity-100" : "opacity-0"}
-                bg-[length:250px_250px] sm:bg-[length:300px_300px] md:bg-[length:400px_400px] lg:bg-[length:500px_500px]
-                bg-[position:120%_105%] sm:bg-[position:85%_130%] md:bg-[position:85%_130%]`}
+                bg-[length:250px_180px] sm:bg-[length:300px_160px] md:bg-[length:400px_270px] lg:bg-[length:500px_360px]
+                bg-[position:120%_103%] sm:bg-[position:85%_130%] md:bg-[position:85%_110%]`}
       style={{
         backgroundImage: `url(${docker})`,
         backgroundRepeat: "no-repeat",

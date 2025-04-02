@@ -21,6 +21,7 @@ import Ansible from './pages/Ansible';
 import Cloud from './pages/Cloud';
 import CICD from './pages/CICD';
 import Projects from './pages/Projects';
+import ProjectDetail from "./pages/ProjectDetail";
 
 const App = () => {
   return (
@@ -48,6 +49,7 @@ const App = () => {
             <Route path="/cloud" element={<Cloud />} />
             <Route path="/cicd" element={<CICD />} />
             <Route path="/projects" element={<Projects />} />
+            <Route path="/projects/:projectId" element={<ProjectDetail />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>

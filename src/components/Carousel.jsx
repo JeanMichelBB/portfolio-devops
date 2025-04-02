@@ -10,10 +10,10 @@ import twitterCloneMobile from "../assets/twitterclonemobile.jpg";
 import twitterCloneWeb from "../assets/twittercloneweb.jpg";
 
 const images = [
-  { mobileImage: apercuMobile, webImage: apercuWeb, link: "/projects/#apercu-project" },
-  { mobileImage: botwhyMobile, webImage: botwhyWeb, link: "/projects/#botwhy-project" },
-  { mobileImage: grafanaMobile, webImage: grafanaWeb, link: "/projects/#grafana-project" },
-  { mobileImage: twitterCloneMobile, webImage: twitterCloneWeb, link: "/projects/#twitter-clone-project" },
+  { mobileImage: apercuMobile, webImage: apercuWeb, link: "/projects/apercu" },
+  { mobileImage: botwhyMobile, webImage: botwhyWeb, link: "/projects/botwhy" },
+  { mobileImage: grafanaMobile, webImage: grafanaWeb, link: "/projects/grafana" },
+  { mobileImage: twitterCloneMobile, webImage: twitterCloneWeb, link: "/projects/twitter-clone" },
 ];
 
 const Carousel = () => {
