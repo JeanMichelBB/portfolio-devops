@@ -10,12 +10,11 @@ const Networking = () => {
     setTimeout(() => setIsVisible(true), 100);
   }, []);
 
-
   return (
     <div
       className={`duration-500 min-h-screen ${isVisible ? "opacity-100" : "opacity-0"}
                     bg-[length:250px_250px] sm:bg-[length:300px_300px] md:bg-[length:400px_400px] lg:bg-[length:500px_500px]
-                    bg-[position:120%_105%] sm:bg-[position:85%_130%] md:bg-[position:85%_130%]`}
+                    bg-[position:120%_105%] sm:bg-[position:85%_130%] md:bg-[position:85%_120%]`}
       style={{
         backgroundImage: `url(${networking})`,
         backgroundRepeat: "no-repeat",
@@ -33,7 +32,7 @@ const Networking = () => {
         <section className="mb-8">
           <h2 className="text-2xl font-semibold text-gray-700 mb-2">My Experience with Networking</h2>
           <p className="text-gray-600">
-            Networking has been a core component of my IT career. From setting up local area networks (LANs) for small businesses to troubleshooting network issues in large enterprise environments, I've gained hands-on experience in configuring routers, switches, firewalls, and VPNs. I also have experience with network security protocols and optimizing network performance.
+            Networking has been a core component of my IT career. I possess extensive expertise in network architecture, having designed and implemented robust network infrastructures. My experience includes troubleshooting complex network issues in large enterprise environments, where I have effectively resolved connectivity problems and optimized performance. Additionally, I have a strong background in network security protocols, ensuring the integrity and confidentiality of data. I have also focused on optimizing network performance through careful configuration and monitoring, leading to improved efficiency and reliability.
           </p>
         </section>
 
@@ -41,9 +40,15 @@ const Networking = () => {
         <section className="mb-8">
           <h2 className="text-2xl font-semibold text-gray-700 mb-2">Real-World Projects</h2>
           <p className="text-gray-600">
-            <strong>Project:</strong> **Small Office Network Setup**
-            <strong>Description:</strong> Designed and implemented a network infrastructure for a small office, including wired and wireless networking, VPN setup, and secure file sharing.
-            <strong>Link:</strong> <a href="https://github.com/your-repo" className="text-blue-600">View on GitHub</a>
+            <strong>Project:</strong> <strong>Home Lab Infrastructure</strong>
+            <br />
+            <strong>Description:</strong> Built a comprehensive home lab environment featuring:
+            <ul className="list-disc pl-5 text-gray-600">
+              <li><strong>Synology NAS:</strong> Serves as a robust storage solution, configured for backups and media hosting, allowing for easy access to files across the network.</li>
+              <li><strong>Proxmox Nodes:</strong> Facilitates Kubernetes deployment and virtualization, enabling efficient container management and resource allocation.</li>
+              <li><strong>Managed Switch:</strong> Configured for VLAN management and traffic prioritization, ensuring efficient data flow and quality of service (QoS) across the network.</li>
+              <li><strong>DDNS and VPN:</strong> Utilized for secure remote access, allowing for safe connections to the home lab environment from anywhere.</li>
+            </ul>
           </p>
         </section>
 

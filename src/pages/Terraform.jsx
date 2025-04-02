@@ -14,7 +14,7 @@ const Terraform = () => {
     <div
       className={`duration-500 min-h-screen ${isVisible ? "opacity-100" : "opacity-0"}
         bg-[length:250px_250px] sm:bg-[length:300px_300px] md:bg-[length:400px_400px] lg:bg-[length:500px_500px]
-        bg-[position:120%_105%] sm:bg-[position:85%_130%] md:bg-[position:85%_130%]`}
+        bg-[position:120%_105%] sm:bg-[position:85%_130%] md:bg-[position:85%_120%]`}
       style={{
         backgroundImage: `url(${terraform})`,
         backgroundRepeat: "no-repeat",
@@ -31,41 +31,60 @@ const Terraform = () => {
         <section className="mb-8">
           <h2 className="text-2xl font-semibold text-gray-700 mb-2">My Experience with Terraform</h2>
           <p className="text-gray-600">
-            I have used Terraform for **____ (describe your project, e.g., provisioning AWS infrastructure, automating multi-cloud deployments, managing Kubernetes clusters, etc.)**.
-            This included **____ (technologies used: AWS, Azure, GCP, Kubernetes, Docker, etc.)**.
+            I have used Terraform in conjunction with GitOps for automating the deployment of infrastructure and services. 
+            This includes managing Terraform configurations for network setup, instances, and services, all stored and version-controlled in Git repositories.
           </p>
           <p className="text-gray-600">
-            One major challenge I solved was **____ (describe a problem: handling state files, managing dynamic resources, automating large-scale deployments, etc.)**.
-            I addressed it by **____ (solution: using remote state with S3, Terraform modules, implementing CI/CD for Terraform automation, etc.)**.
+            The following GitHub repositories showcase my work:
+            <ul className="list-disc pl-5 text-gray-600">
+              <li><a href="https://github.com/JeanMichelBB/fem-eci-terraform-github.git" className="text-blue-600">fem-eci-terraform-github</a></li>
+              <li><a href="https://github.com/JeanMichelBB/fem-eci-terraform-tfe.git" className="text-blue-600">fem-eci-terraform-tfe</a></li>
+              <li><a href="https://github.com/JeanMichelBB/oci-terraform-network.git" className="text-blue-600">oci-terraform-network</a></li>
+              <li><a href="https://github.com/JeanMichelBB/oci-product-service.git" className="text-blue-600">oci-product-service</a></li>
+            </ul>
+          </p>
+          <p className="text-gray-600">
+            Terraform is used to structure the projects from start to finish, automating the entire deployment process. 
+            Additionally, I use Ansible for managing instances, ensuring proper configuration and automation.
           </p>
         </section>
 
         <section className="mb-8">
-          <h2 className="text-2xl font-semibold text-gray-700 mb-2">Real-World Implementation (Projects)</h2>
-          <p className="text-gray-600">
-            <strong>Project:</strong> **____ (Project Name, e.g., "Automated Cloud Infrastructure with Terraform")**
-            <strong>Description:</strong> **____ (How you used Terraform in this project)**
-            <strong>Link:</strong> <a href="____ (GitHub or Live Demo URL)" className="text-blue-600">View on GitHub</a>
-          </p>
+          <h2 className="text-2xl font-semibold text-gray-700 mb-2">Real-World Projects</h2>
+
+          <div className="bg-gray-100 p-4 rounded-lg shadow-md mb-4">
+            <h3 className="text-xl font-semibold text-gray-800">BotWhy</h3>
+            <p className="text-gray-700 mt-2">
+              A chatbot integrating OpenAI’s GPT-4o Mini and FastAPI. It provides an interactive experience where users can ask questions
+              and receive AI-generated responses in real time.
+            </p>
+            <a href="https://github.com/JeanMichelBB/BotWhy" className="text-blue-600 font-semibold mt-2 inline-block">
+              View on GitHub →
+            </a>
+            <a href="https://botwhy.sacenpapier.org/" className="text-blue-600 font-semibold ml-4 inline-block">
+              Live Demo →
+            </a>
+          </div>
+
         </section>
 
         <section className="mb-8">
           <h2 className="text-2xl font-semibold text-gray-700 mb-2">Integration with Other Technologies</h2>
           <ul className="list-disc pl-5 text-gray-600">
-            <li><strong>CI/CD Pipelines:</strong> Automated infrastructure deployment using **____ (Jenkins, GitHub Actions, Terraform Cloud, etc.)**.</li>
-            <li><strong>Cloud Infrastructure:</strong> Used Terraform to configure **____ (AWS, Azure, GCP, Kubernetes clusters, etc.)**.</li>
-            <li><strong>State Management:</strong> Implemented **remote state storage (S3, Terraform Cloud, etc.)** to manage infrastructure consistency.</li>
-            <li><strong>Security & Compliance:</strong> Used **____ (IAM roles, security groups, Terraform Sentinel, etc.)**.</li>
+            <li><strong>CI/CD Pipelines:</strong> Automated infrastructure deployment using <strong>GitHub Actions</strong> and <strong>Terraform Cloud</strong>.</li>
+            <li><strong>Cloud Infrastructure:</strong> Used Terraform to configure <strong>AWS</strong>, <strong>GCP</strong>, and <strongstrong>Kubernetes clusters</strongstrong>.</li>
+            <li><strong>State Management:</strong> Implemented <strong>remote state storage on Terraform Cloud</strong> to manage infrastructure consistency.</li>
+            <li><strong>Security & Compliance:</strong> Used <strong>IAM roles</strong>, <strong>security groups</strong>, and <strong>Terraform Sentinel</strong>.</li>
           </ul>
         </section>
 
         <section className="mb-8">
           <h2 className="text-2xl font-semibold text-gray-700 mb-2">Best Practices & Troubleshooting</h2>
           <ul className="list-disc pl-5 text-gray-600">
-            <li><strong>Infrastructure Modularity:</strong> Used **Terraform modules** to keep configurations reusable and maintainable.</li>
-            <li><strong>State Management:</strong> Ensured **secure and consistent state handling** using remote backends.</li>
-            <li><strong>Optimizing Performance:</strong> Applied **resource dependencies** and `terraform plan` before applying changes.</li>
-            <li><strong>Debugging:</strong> Used **`terraform fmt`, `terraform validate`, and `terraform apply -auto-approve`** for streamlined debugging.</li>
+            <li><strong>Infrastructure Modularity:</strong> Used <strong>Terraform modules</strong> to keep configurations reusable and maintainable.</li>
+            <li><strong>State Management:</strong> Ensured <strong>secure and consistent state handling</strong> using remote backends like Terraform Cloud.</li>
+            <li><strong>Optimizing Performance:</strong> Applied <strong>resource dependencies</strong> and ran `terraform plan` before applying changes.</li>
+            <li><strong>Debugging:</strong> Used <strong>`terraform fmt`, `terraform validate`, and `terraform apply -auto-approve`</strong> for streamlined debugging.</li>
           </ul>
         </section>
 

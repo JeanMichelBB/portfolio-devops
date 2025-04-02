@@ -55,24 +55,22 @@ const NGINX = () => {
           </h2>
           <pre className="bg-gray-100 p-3 sm:p-4 md:p-6 rounded-md text-gray-800 text-sm sm:text-base overflow-auto">
             <code>
-              {`
-server {
+{`server {
   listen 80;
-  server_name example.com;
+  server_name _;
 
-  location / {
-    proxy_pass http://localhost:3000;
+  location /api/ {
+    proxy_pass http://backend:8000/;
     proxy_set_header Host $host;
     proxy_set_header X-Real-IP $remote_addr;
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     proxy_set_header X-Forwarded-Proto $scheme;
   }
-}
-      `}
+}`}
             </code>
           </pre>
           <p className="text-gray-600 mt-2 text-sm sm:text-base leading-relaxed">
-            This is a basic configuration for using NGINX as a reverse proxy. It listens on port 80 and forwards requests to a backend service running on port 3000.
+            This configuration is specifically for routing API requests from "botwhy" within the user's Docker network.
           </p>
         </section>
 

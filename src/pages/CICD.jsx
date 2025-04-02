@@ -14,7 +14,7 @@ const CICD = () => {
     <div
       className={`duration-500 min-h-screen ${isVisible ? "opacity-100" : "opacity-0"}
             bg-[length:250px_250px] sm:bg-[length:300px_300px] md:bg-[length:400px_400px] lg:bg-[length:500px_500px]
-            bg-[position:120%_105%] sm:bg-[position:85%_130%] md:bg-[position:85%_130%]`}
+            bg-[position:120%_103%] sm:bg-[position:85%_130%] md:bg-[position:85%_110%]`}
       style={{
         backgroundImage: `url(${cicd})`,
         backgroundRepeat: "no-repeat",
@@ -33,31 +33,67 @@ const CICD = () => {
         <section className="mb-8">
           <h2 className="text-2xl font-semibold text-gray-700 mb-2">My Experience with CI/CD</h2>
           <p className="text-gray-600">
-            I have set up **CI/CD pipelines** for **____ (describe your project, e.g., automating deployment for a web app)**.
-            This involved using **____ (technologies: GitHub Actions, Jenkins, GitLab CI, CircleCI)** to automate testing and deployment workflows.
+            I have set up <strong>CI/CD pipelines</strong> for automating deployment and testing workflows using <strong>GitHub Actions</strong>. This ensures that before deploying any changes to the production environment, all tests are automatically run to verify the integrity of the code.
           </p>
           <p className="text-gray-600">
-            A major challenge I encountered was **____ (describe a problem: slow build times, deployment failures, etc.)**.
-            I resolved it by **____ (solution: optimizing pipeline steps, parallelizing tests, introducing caching, etc.)**.
+            A major challenge I encountered was <strong>slow build times</strong> during the testing phase. I resolved it by optimizing the pipeline steps, <strong>parallelizing tests</strong>, and introducing <strong>caching</strong> to reduce redundant tasks.
           </p>
         </section>
 
+        {/* Real-World Projects */}
         <section className="mb-8">
-          <h2 className="text-2xl font-semibold text-gray-700 mb-2">Real-World Implementation (Projects)</h2>
-          <p className="text-gray-600">
-            <strong>Project:</strong> **____ (Project Name, e.g., "Automated CI/CD for Web App")**
-            <strong>Description:</strong> **____ (How you used CI/CD in this project)**
-            <strong>Link:</strong> <a href="____ (GitHub or Live Demo URL)" className="text-blue-600">View on GitHub</a>
-          </p>
+          <h2 className="text-2xl font-semibold text-gray-700 mb-2">Real-World Projects</h2>
+
+          <div className="bg-gray-100 p-4 rounded-lg shadow-md mb-4">
+            <h3 className="text-xl font-semibold text-gray-800">Twitter Clone</h3>
+            <p className="text-gray-700 mt-2">
+              A Twitter clone built with React, FastAPI, and MySQL. It features user authentication, tweet posting, and a responsive design.
+              The backend is powered by FastAPI, and MySQL ensures data persistence and reliability.
+            </p>
+            <a href="https://github.com/JeanMichelBB/twitterclone" className="text-blue-600 font-semibold mt-2 inline-block">
+              View on GitHub →
+            </a>
+            <a href="https://twitterclone.sacenpapier.org" className="text-blue-600 font-semibold ml-4 inline-block">
+              Live Demo →
+            </a>
+          </div>
+
+          <div className="bg-gray-100 p-4 rounded-lg shadow-md mb-4">
+            <h3 className="text-xl font-semibold text-gray-800">BotWhy</h3>
+            <p className="text-gray-700 mt-2">
+              A chatbot integrating OpenAI’s GPT-4o Mini and FastAPI. It provides an interactive experience where users can ask questions
+              and receive AI-generated responses in real time.
+            </p>
+            <a href="https://github.com/JeanMichelBB/BotWhy" className="text-blue-600 font-semibold mt-2 inline-block">
+              View on GitHub →
+            </a>
+            <a href="https://botwhy.sacenpapier.org/" className="text-blue-600 font-semibold ml-4 inline-block">
+              Live Demo →
+            </a>
+          </div>
+
+          <div className="bg-gray-100 p-4 rounded-lg shadow-md">
+            <h3 className="text-xl font-semibold text-gray-800">Apercu</h3>
+            <p className="text-gray-700 mt-2">
+              A web application showcasing my services and work. It serves as a portfolio, highlighting my skills and projects in an easy-to-navigate
+              and visually appealing way.
+            </p>
+            <a href="https://github.com/JeanMichelBB/apercu" className="text-blue-600 font-semibold mt-2 inline-block">
+              View on GitHub →
+            </a>
+            <a href="https://apercu.sacenpapier.org/" className="text-blue-600 font-semibold ml-4 inline-block">
+              Live Demo →
+            </a>
+          </div>
         </section>
 
         <section className="mb-8">
           <h2 className="text-2xl font-semibold text-gray-700 mb-2">Integration with Other Technologies</h2>
           <ul className="list-disc pl-5 text-gray-600">
-            <li><strong>Version Control:</strong> Used Git and GitHub/GitLab for source control and collaboration.</li>
+            <li><strong>Version Control:</strong> Used Git and GitHub for source control and collaboration.</li>
             <li><strong>Docker:</strong> Integrated Docker for containerization in the CI/CD pipeline.</li>
-            <li><strong>Cloud Deployments:</strong> Deployed applications to **____ (AWS, Azure, Google Cloud, etc.)** via automated CI/CD processes.</li>
-            <li><strong>Monitoring:</strong> Integrated **____ (Prometheus, Grafana, etc.)** to monitor CI/CD pipelines and application performance.</li>
+            <li><strong>Cloud Deployments:</strong> Deployed applications to <strong>OCI</strong> via automated CI/CD processes.</li>
+            <li><strong>Monitoring:</strong> Integrated <strong>Grafana</strong> to monitor CI/CD pipelines and application performance.</li>
           </ul>
         </section>
 

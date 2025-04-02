@@ -5,18 +5,16 @@ import monitoring from "../assets/monitoring.jpg"; // Adjust the path as necessa
 const Monitoring = () => {
   const [isVisible, setIsVisible] = useState(false);
 
-
   useEffect(() => {
     window.scrollTo(0, 0);
     setTimeout(() => setIsVisible(true), 100);
   }, []);
 
-
   return (
     <div
       className={`duration-500 min-h-screen ${isVisible ? "opacity-100" : "opacity-0"}
                 bg-[length:250px_250px] sm:bg-[length:300px_300px] md:bg-[length:400px_400px] lg:bg-[length:500px_500px]
-                bg-[position:120%_105%] sm:bg-[position:85%_130%] md:bg-[position:85%_130%]`}
+                bg-[position:120%_105%] sm:bg-[position:85%_130%] md:bg-[position:85%_120%]`}
       style={{
         backgroundImage: `url(${monitoring})`,
         backgroundRepeat: "no-repeat",
@@ -34,18 +32,24 @@ const Monitoring = () => {
         <section className="mb-8">
           <h2 className="text-2xl font-semibold text-gray-700 mb-2">My Experience with Monitoring</h2>
           <p className="text-gray-600">
-            I have been using monitoring tools like Prometheus and Grafana for several years to manage and visualize the performance of various systems. From setting up alerts for resource usage spikes to building real-time dashboards, monitoring has been critical in ensuring the reliability and stability of my infrastructure. I enjoy optimizing systems and preventing issues from affecting users.
+            I use Grafana for different projects. I used to build it on an Ubuntu server with Docker Compose to collect all necessary metrics for monitoring Docker and system performance. Now, I run it on my Kubernetes cluster, where I receive alerts about any issues detected by predefined rules in Grafana. These alerts are sent to me via Discord for quick action.
           </p>
         </section>
 
         {/* Real-World Projects */}
         <section className="mb-8">
           <h2 className="text-2xl font-semibold text-gray-700 mb-2">Real-World Projects</h2>
-          <p className="text-gray-600">
-            <strong>Project:</strong> **Server Monitoring with Prometheus and Grafana**
-            <strong>Description:</strong> Set up Prometheus to collect system metrics and configured Grafana dashboards to visualize server health. Integrated alerting to notify the team if any critical metrics, such as CPU usage or memory, exceeded thresholds.
-            <strong>Link:</strong> <a href="https://github.com/your-repo" className="text-blue-600">View on GitHub</a>
-          </p>
+
+          <div className="bg-gray-100 p-4 rounded-lg shadow-md">
+            <h3 className="text-xl font-semibold text-gray-800">Grafana & Prometheus Monitoring Stack</h3>
+            <p className="text-gray-700 mt-2">
+              I set up a monitoring stack using Prometheus and Grafana to track the performance of my home lab Kubernetes cluster. The stack collects metrics from various sources, including Docker containers and system resources, and visualizes them in Grafana dashboards. This setup allows me to monitor resource usage, identify bottlenecks, and ensure the smooth operation of my applications.
+            </p>
+
+            <a href="https://snapshots.raintank.io/dashboard/snapshot/zcU3p7u4s6hH6T29bOku2VeEIYazaKaY" className="text-blue-600 font-semibold mt-2 inline-block">
+              View on Grafana →
+            </a>
+          </div>
         </section>
 
         {/* Integration with Other Technologies */}

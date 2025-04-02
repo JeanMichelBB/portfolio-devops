@@ -31,39 +31,47 @@ const Ansible = () => {
         <section className="mb-8">
           <h2 className="text-2xl font-semibold text-gray-700 mb-2">My Experience with Ansible</h2>
           <p className="text-gray-600">
-            I have used Ansible in **____ (describe your project, e.g., provisioning servers, configuring databases, automating deployments)**.
-            This included **____ (technologies used: Nginx, PostgreSQL, Docker, Kubernetes, etc.)**.
+            I use Ansible to manage an instance of OCI, install dependencies, and manage Dockerfiles for the deployment of my project BotWhy. 
           </p>
           <p className="text-gray-600">
-            One major challenge I solved was **____ (describe a problem: managing secrets, setting up Ansible vault, automating multi-server deployments, etc.)**.
-            I addressed it by **____ (solution: using dynamic inventories, modular roles, optimizing playbooks, etc.)**.
+            I also automate the creation of system files needed for my instance and integrate CI/CD using GitHub Actions to upload my project automatically.
           </p>
         </section>
 
-        <section className="mb-8">
-          <h2 className="text-2xl font-semibold text-gray-700 mb-2">Real-World Implementation (Projects)</h2>
-          <p className="text-gray-600">
-            <strong>Project:</strong> **____ (Project Name, e.g., "Automated Server Provisioning with Ansible")**
-            <strong>Description:</strong> **____ (How you used Ansible in this project)**
-            <strong>Link:</strong> <a href="____ (GitHub or Live Demo URL)" className="text-blue-600">View on GitHub</a>
-          </p>
+ {/* Real-World Projects */}
+ <section className="mb-8">
+          <h2 className="text-2xl font-semibold text-gray-700 mb-2">Real-World Projects</h2>
+
+          <div className="bg-gray-100 p-4 rounded-lg shadow-md mb-4">
+            <h3 className="text-xl font-semibold text-gray-800">BotWhy</h3>
+            <p className="text-gray-700 mt-2">
+              A chatbot integrating OpenAI’s GPT-4o Mini and FastAPI. It provides an interactive experience where users can ask questions
+              and receive AI-generated responses in real time.
+            </p>
+            <a href="https://github.com/JeanMichelBB/BotWhy" className="text-blue-600 font-semibold mt-2 inline-block">
+              View on GitHub →
+            </a>
+            <a href="https://botwhy.sacenpapier.org/" className="text-blue-600 font-semibold ml-4 inline-block">
+              Live Demo →
+            </a>
+          </div>
+
         </section>
 
         <section className="mb-8">
           <h2 className="text-2xl font-semibold text-gray-700 mb-2">Integration with Other Technologies</h2>
           <ul className="list-disc pl-5 text-gray-600">
-            <li><strong>CI/CD Pipelines:</strong> Automated infrastructure deployment using **____ (Jenkins, GitHub Actions, etc.)**.</li>
-            <li><strong>Cloud Infrastructure:</strong> Used Ansible to configure **____ (AWS EC2, Azure VMs, GCP Compute Engine, etc.)**.</li>
-            <li><strong>Container Orchestration:</strong> Deployed Kubernetes clusters with **____ (Kubeadm, Helm, etc.)**.</li>
-            <li><strong>Security & Compliance:</strong> Used **____ (Ansible Vault, automated security hardening, etc.)**.</li>
+            <li><strong>CI/CD Pipelines:</strong> Used GitHub Actions to automatically deploy and manage my BotWhy project on OCI.</li>
+            <li><strong>Cloud Infrastructure:</strong> Managed an OCI instance using Ansible for provisioning and configuration.</li>
+            <li><strong>Container Orchestration:</strong> Used Ansible to manage Dockerfiles and streamline deployments.</li>
           </ul>
         </section>
 
         <section className="mb-8">
           <h2 className="text-2xl font-semibold text-gray-700 mb-2">Best Practices & Troubleshooting</h2>
           <ul className="list-disc pl-5 text-gray-600">
-            <li><strong>Optimizing Playbooks:</strong> Used **loops and conditionals** to avoid redundant tasks.</li>
-            <li><strong>Security:</strong> Managed secrets using **Ansible Vault**.</li>
+            <li><strong>Optimizing Playbooks:</strong> Used <strong>loops and conditionals</strong> to avoid redundant tasks.</li>
+            <li><strong>Security:</strong> Managed secrets using <strong>Ansible Vault</strong>.</li>
             <li><strong>Idempotency:</strong> Ensured playbooks are repeatable and only make necessary changes.</li>
             <li><strong>Debugging:</strong> Used `-vvvv` verbosity for detailed logs when troubleshooting.</li>
           </ul>

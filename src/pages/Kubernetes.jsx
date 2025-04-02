@@ -5,18 +5,16 @@ import kubernetes from "../assets/kubernetes.jpg"; // Adjust the path as necessa
 const Kubernetes = () => {
   const [isVisible, setIsVisible] = useState(false);
 
-
   useEffect(() => {
     window.scrollTo(0, 0);
-    setTimeout(() => setIsVisible(true), 100);
+    setTimeout(() => setIsVisible(true), 200);
   }, []);
-
 
   return (
     <div
       className={`duration-500 min-h-screen ${isVisible ? "opacity-100" : "opacity-0"}
                 bg-[length:250px_250px] sm:bg-[length:300px_300px] md:bg-[length:400px_400px] lg:bg-[length:500px_500px]
-                bg-[position:120%_105%] sm:bg-[position:85%_130%] md:bg-[position:85%_130%]`}
+                bg-[position:120%_103%] sm:bg-[position:85%_130%] md:bg-[position:85%_110%]`}
       style={{
         backgroundImage: `url(${kubernetes})`,
         backgroundRepeat: "no-repeat",
@@ -32,22 +30,60 @@ const Kubernetes = () => {
 
         {/* Personal Experience */}
         <section className="mb-8">
-          <h2 className="text-2xl font-semibold text-gray-700 mb-2">My Experience with Kubernetes</h2>
+          <h2 className="text-2xl font-semibold text-gray-700 mb-2">My Home Lab Kubernetes Cluster</h2>
           <p className="text-gray-600">
-            I have worked with Kubernetes on several large-scale applications, particularly in cloud environments like AWS and Google Cloud.
-            In one project, I deployed a microservices-based architecture using Kubernetes, which significantly simplified the scaling and management of services.
-            By leveraging Kubernetes’ automatic scaling and health checks, I could ensure that the system remained highly available even under heavy loads.
+            I’ve set up a home lab with a Kubernetes cluster running on Proxmox. The cluster consists of 9 nodes: 
+            3 master nodes, 2 worker nodes, 3 Longhorn storage nodes, and 1 admin node. I deploy and manage various full-stack applications, such as a Twitter clone, using Docker containers. 
+            For monitoring and alerting, I’ve integrated Prometheus and Grafana to track the health and performance of the cluster. Additionally, I’ve set up Discord notifications to send real-time alerts about system events.
           </p>
         </section>
 
         {/* Real-World Projects */}
         <section className="mb-8">
           <h2 className="text-2xl font-semibold text-gray-700 mb-2">Real-World Projects</h2>
+
+          <div className="bg-gray-100 p-4 rounded-lg shadow-md mb-4">
+            <h3 className="text-xl font-semibold text-gray-800">Twitter Clone</h3>
+            <p className="text-gray-700 mt-2">
+              A Twitter clone built with React, FastAPI, and MySQL. It features user authentication, tweet posting, and a responsive design.
+              The backend is powered by FastAPI, and MySQL ensures data persistence and reliability.
+            </p>
+            <a href="https://github.com/JeanMichelBB/twitterclone" className="text-blue-600 font-semibold mt-2 inline-block">
+              View on GitHub →
+            </a>
+            <a href="https://twitterclone.sacenpapier.org" className="text-blue-600 font-semibold ml-4 inline-block">
+              Live Demo →
+            </a>
+          </div>
+
+          <div className="bg-gray-100 p-4 rounded-lg shadow-md">
+            <h3 className="text-xl font-semibold text-gray-800">Apercu</h3>
+            <p className="text-gray-700 mt-2">
+              A web application showcasing my services and work. It serves as a portfolio, highlighting my skills and projects in an easy-to-navigate
+              and visually appealing way.
+            </p>
+            <a href="https://github.com/JeanMichelBB/apercu" className="text-blue-600 font-semibold mt-2 inline-block">
+              View on GitHub →
+            </a>
+            <a href="https://apercu.sacenpapier.org/" className="text-blue-600 font-semibold ml-4 inline-block">
+              Live Demo →
+            </a>
+          </div>
+        </section>
+
+        {/* Kubernetes Home Lab Setup */}
+        <section className="mb-8">
+          <h2 className="text-2xl font-semibold text-gray-700 mb-2">Kubernetes Home Lab Setup</h2>
           <p className="text-gray-600">
-            <strong>Project:</strong> **E-commerce Platform with Kubernetes**
-            <strong>Description:</strong> Built a containerized e-commerce platform using Kubernetes, Docker, and Helm for continuous integration and deployment.
-            <strong>Link:</strong> <a href="https://github.com/your-repo" className="text-blue-600">View on GitHub</a>
+            My home lab is built on a Proxmox environment with Kubernetes running on top of it. 
+            Here’s the breakdown of the setup:
           </p>
+          <ul className="list-disc pl-5 text-gray-600">
+            <li><strong>Proxmox Cluster:</strong> 3 physical machines running Proxmox to create a highly available Kubernetes cluster.</li>
+            <li><strong>Nodes:</strong> 3 master nodes, 2 worker nodes, 3 Longhorn storage nodes for persistent storage, and 1 admin node to manage the infrastructure.</li>
+            <li><strong>Full-Stack Applications:</strong> Running a variety of applications, including a Dockerized Twitter clone, which is deployed and scaled across the Kubernetes cluster.</li>
+            <li><strong>Monitoring Stack:</strong> Integrated Prometheus for monitoring the cluster’s health, and Grafana to visualize the data. Real-time notifications are sent to Discord for critical alerts.</li>
+          </ul>
         </section>
 
         {/* Integration with Other Technologies */}
@@ -60,14 +96,24 @@ const Kubernetes = () => {
           </ul>
         </section>
 
+        {/* Proxmox + Kubernetes Integration */}
+        <section className="mb-8">
+          <h2 className="text-2xl font-semibold text-gray-700 mb-2">Proxmox + Kubernetes Integration</h2>
+          <p className="text-gray-600">
+            I’ve integrated Kubernetes with Proxmox to create a scalable and resilient infrastructure. 
+            The Proxmox virtual machines host the Kubernetes nodes, which are configured to work together seamlessly. 
+            Longhorn is used to manage persistent storage, ensuring high availability and easy scaling of applications across the cluster.
+          </p>
+        </section>
+
         {/* Best Practices & Troubleshooting */}
         <section className="mb-8">
           <h2 className="text-2xl font-semibold text-gray-700 mb-2">Best Practices & Troubleshooting</h2>
           <ul className="list-disc pl-5 text-gray-600">
-            <li><strong>Namespace Segmentation:</strong> Use namespaces to isolate different environments (dev, staging, production) within a Kubernetes cluster.</li>
-            <li><strong>Resource Requests & Limits:</strong> Always define resource requests and limits for CPU and memory to ensure efficient resource allocation.</li>
-            <li><strong>Use Health Checks:</strong> Implement readiness and liveness probes to ensure pods are running smoothly and can be automatically restarted if necessary.</li>
-            <li><strong>Use Labels & Annotations:</strong> Utilize labels and annotations for easy management, organization, and filtering of Kubernetes resources.</li>
+            <li><strong>Namespace Segmentation:</strong> Use namespaces to isolate different environments (e.g., development, staging, production) within a Kubernetes cluster.</li>
+            <li><strong>Resource Management:</strong> Define resource requests and limits for CPU and memory to prevent over-provisioning and ensure stability.</li>
+            <li><strong>Health Checks:</strong> Implement readiness and liveness probes to detect failures early and enable automatic recovery.</li>
+            <li><strong>Efficient Logging & Monitoring:</strong> Centralize logs using tools like Fluentd or Loki, and visualize performance metrics with Grafana.</li>
           </ul>
         </section>
 

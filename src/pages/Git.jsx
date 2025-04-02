@@ -14,7 +14,7 @@ const Git = () => {
     <div
       className={`duration-500 min-h-screen ${isVisible ? "opacity-100" : "opacity-0"}
     bg-[length:250px_250px] sm:bg-[length:300px_300px] md:bg-[length:400px_400px] lg:bg-[length:500px_500px]
-    bg-[position:120%_109%] sm:bg-[position:85%_130%] md:bg-[position:85%_130%]`}
+    bg-[position:120%_105%] sm:bg-[position:85%_130%] md:bg-[position:85%_115%]`}
       style={{
         backgroundImage: `url(${git})`,
         backgroundRepeat: "no-repeat",
@@ -30,21 +30,58 @@ const Git = () => {
         <section className="mb-8">
           <h2 className="text-2xl font-semibold text-gray-700 mb-2">My Experience with Git</h2>
           <p className="text-gray-600">
-            I have used Git extensively in both personal and team projects. For example, in **____ (describe a project)**, I utilized Git for version control, collaborating with a team of developers and ensuring smooth code integration.
+            I have used Git extensively in both personal and team projects. For example, in my <strong>Twitter Clone</strong> project, I utilized Git for version control, collaborating with a team of developers and ensuring smooth code integration. This allowed us to track changes effectively and revert if necessary.
           </p>
           <p className="text-gray-600">
-            One of the key features that helped was **branching and merging**. By creating separate branches for new features, I was able to work on features without disrupting the main codebase, and easily merged back once the feature was completed and reviewed.
+            One of the key features that helped was <strong>branching and merging</strong>. By creating separate branches for new features, I was able to work independently without disrupting the main codebase. Once a feature was completed and reviewed, merging it back ensured a seamless integration process.
           </p>
         </section>
 
         {/* Real-World Projects */}
         <section className="mb-8">
           <h2 className="text-2xl font-semibold text-gray-700 mb-2">Real-World Projects</h2>
-          <p className="text-gray-600">
-            <strong>Project:</strong> **____ (Project Name)**
-            <strong>Description:</strong> **____ (How you used Git in the project)**
-            <strong>Link:</strong> <a href="____ (GitHub or Live Demo URL)" className="text-blue-600">View on GitHub</a>
-          </p>
+
+          <div className="bg-gray-100 p-4 rounded-lg shadow-md mb-4">
+            <h3 className="text-xl font-semibold text-gray-800">Twitter Clone</h3>
+            <p className="text-gray-700 mt-2">
+              A Twitter clone built with React, FastAPI, and MySQL. It features user authentication, tweet posting, and a responsive design.
+              The backend is powered by FastAPI, and MySQL ensures data persistence and reliability.
+            </p>
+            <a href="https://github.com/JeanMichelBB/twitterclone" className="text-blue-600 font-semibold mt-2 inline-block">
+              View on GitHub →
+            </a>
+            <a href="https://twitterclone.sacenpapier.org" className="text-blue-600 font-semibold ml-4 inline-block">
+              Live Demo →
+            </a>
+          </div>
+
+          <div className="bg-gray-100 p-4 rounded-lg shadow-md mb-4">
+            <h3 className="text-xl font-semibold text-gray-800">BotWhy</h3>
+            <p className="text-gray-700 mt-2">
+              A chatbot integrating OpenAI’s GPT-4o Mini and FastAPI. It provides an interactive experience where users can ask questions
+              and receive AI-generated responses in real time.
+            </p>
+            <a href="https://github.com/JeanMichelBB/BotWhy" className="text-blue-600 font-semibold mt-2 inline-block">
+              View on GitHub →
+            </a>
+            <a href="https://botwhy.sacenpapier.org/" className="text-blue-600 font-semibold ml-4 inline-block">
+              Live Demo →
+            </a>
+          </div>
+
+          <div className="bg-gray-100 p-4 rounded-lg shadow-md">
+            <h3 className="text-xl font-semibold text-gray-800">Apercu</h3>
+            <p className="text-gray-700 mt-2">
+              A web application showcasing my services and work. It serves as a portfolio, highlighting my skills and projects in an easy-to-navigate
+              and visually appealing way.
+            </p>
+            <a href="https://github.com/JeanMichelBB/apercu" className="text-blue-600 font-semibold mt-2 inline-block">
+              View on GitHub →
+            </a>
+            <a href="https://apercu.sacenpapier.org/" className="text-blue-600 font-semibold ml-4 inline-block">
+              Live Demo →
+            </a>
+          </div>
         </section>
 
         {/* Integration with Other Technologies */}

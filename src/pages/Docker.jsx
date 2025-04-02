@@ -32,31 +32,66 @@ const Docker = () => {
         <section className="mb-8">
           <h2 className="text-2xl font-semibold text-gray-700 mb-2"> My Experience with Docker</h2>
           <p className="text-gray-600">
-            I have used Docker in **____ (describe your project, e.g., deploying a FastAPI backend, setting up a monitoring stack, containerizing a microservice architecture)**.
-            This included **____ (technologies used: Nginx, Redis, PostgreSQL, Prometheus, etc.)**.
+            I have used Docker to containerize and deploy multiple projects, including FastAPI-based applications, monitoring stacks, and web applications. Technologies used include Nginx, Redis, PostgreSQL, Prometheus, and Grafana.
           </p>
           <p className="text-gray-600">
-            One major challenge I solved was **____ (describe a problem: container networking, volume persistence, security hardening, etc.)**.
-            I addressed it by **____ (solution: using multi-stage builds, optimizing Dockerfiles, creating a Docker Compose setup, etc.)**.
+            One major challenge I solved was ensuring efficient container networking between microservices. I addressed it by using Docker networks, defining custom bridge networks, and optimizing the Docker Compose configuration.
           </p>
         </section>
 
         <section className="mb-8">
-          <h2 className="text-2xl font-semibold text-gray-700 mb-2">Real-World Implementation (Projects)</h2>
-          <p className="text-gray-600">
-            <strong>Project:</strong> **____ (Project Name, e.g., "Monitoring Stack with Docker & Prometheus")**
-            <strong>Description:</strong> **____ (How you used Docker in this project)**
-            <strong>Link:</strong> <a href="____ (GitHub or Live Demo URL)" className="text-blue-600">View on GitHub</a>
-          </p>
+          <h2 className="text-2xl font-semibold text-gray-700 mb-2">Real-World Projects</h2>
+
+          <div className="bg-gray-100 p-4 rounded-lg shadow-md mb-4">
+            <h3 className="text-xl font-semibold text-gray-800">Twitter Clone</h3>
+            <p className="text-gray-700 mt-2">
+              A Twitter clone built with React, FastAPI, and MySQL. It features user authentication, tweet posting, and a responsive design.
+              The backend is powered by FastAPI, and MySQL ensures data persistence and reliability.
+            </p>
+            <a href="https://github.com/JeanMichelBB/twitterclone" className="text-blue-600 font-semibold mt-2 inline-block">
+              View on GitHub →
+            </a>
+            <a href="https://twitterclone.sacenpapier.org" className="text-blue-600 font-semibold ml-4 inline-block">
+              Live Demo →
+            </a>
+          </div>
+
+          <div className="bg-gray-100 p-4 rounded-lg shadow-md mb-4">
+            <h3 className="text-xl font-semibold text-gray-800">BotWhy</h3>
+            <p className="text-gray-700 mt-2">
+              A chatbot integrating OpenAI’s GPT-4o Mini and FastAPI. It provides an interactive experience where users can ask questions
+              and receive AI-generated responses in real time.
+            </p>
+            <a href="https://github.com/JeanMichelBB/BotWhy" className="text-blue-600 font-semibold mt-2 inline-block">
+              View on GitHub →
+            </a>
+            <a href="https://botwhy.sacenpapier.org/" className="text-blue-600 font-semibold ml-4 inline-block">
+              Live Demo →
+            </a>
+          </div>
+
+          <div className="bg-gray-100 p-4 rounded-lg shadow-md">
+            <h3 className="text-xl font-semibold text-gray-800">Apercu</h3>
+            <p className="text-gray-700 mt-2">
+              A web application showcasing my services and work. It serves as a portfolio, highlighting my skills and projects in an easy-to-navigate
+              and visually appealing way.
+            </p>
+            <a href="https://github.com/JeanMichelBB/apercu" className="text-blue-600 font-semibold mt-2 inline-block">
+              View on GitHub →
+            </a>
+            <a href="https://apercu.sacenpapier.org/" className="text-blue-600 font-semibold ml-4 inline-block">
+              Live Demo →
+            </a>
+          </div>
         </section>
 
         <section className="mb-8">
           <h2 className="text-2xl font-semibold text-gray-700 mb-2">Integration with Other Technologies</h2>
           <ul className="list-disc pl-5 text-gray-600">
-            <li><strong>CI/CD Pipelines:</strong> Automated deployments using **____ (Jenkins, GitHub Actions, GitLab CI, etc.)**.</li>
-            <li><strong>Kubernetes:</strong> Deployed Docker containers in **____ (describe use case, e.g., microservices architecture, high availability setup)**.</li>
-            <li><strong>Cloud Deployments:</strong> Used Docker on **____ (AWS ECS, Azure Container Instances, Google Cloud Run, etc.)**.</li>
-            <li><strong>Monitoring:</strong> Integrated **____ (Prometheus, Grafana, ELK Stack, etc.)** to monitor containerized applications.</li>
+            <li><strong>CI/CD Pipelines:</strong> Automated deployments using GitHub Actions.</li>
+            <li><strong>Kubernetes:</strong> Deployed Docker containers for microservices architecture, ensuring high availability and scalability.</li>
+            <li><strong>Cloud Deployments:</strong> Used Docker on OCI Compute instances and AWS ECS for hosting services.</li>
+            <li><strong>Monitoring:</strong> Integrated Prometheus and Grafana to track system health and logs of Dockerized applications.</li>
           </ul>
         </section>
 
@@ -64,9 +99,10 @@ const Docker = () => {
           <h2 className="text-2xl font-semibold text-gray-700 mb-2">Best Practices & Troubleshooting</h2>
           <ul className="list-disc pl-5 text-gray-600">
             <li><strong>Reduce image size:</strong> Used Alpine Linux (`FROM node:alpine`) for smaller, optimized images.</li>
-            <li><strong>Security:</strong> Implemented **____ (e.g., non-root users, secrets management, scanning images with Trivy)**.</li>
+            <li><strong>Security:</strong> Implemented non-root users, secrets management, and scanned images with Trivy for vulnerabilities.</li>
             <li><strong>Networking:</strong> Used Docker networks to isolate services and ensure better security.</li>
-            <li><strong>Debugging:</strong> Troubleshot containers using `docker logs`, `docker exec -it bash`, and `docker inspect`.</li>
+            <li><strong>Logging & Debugging:</strong> Used centralized logging with Loki and Fluentd, in addition to `docker logs`, `docker exec`, and `docker inspect`.</li>
+            <li><strong>Performance Optimization:</strong> Used multi-stage builds, optimized `Dockerfile` configurations, and leveraged caching.</li>
           </ul>
         </section>
 
