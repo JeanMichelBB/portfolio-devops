@@ -5,31 +5,7 @@ const MonitoringFundamental = () => {
     const [height, setHeight] = useState(0);
     const basicsRef = useRef(null);
     const sectionRef = useRef(null);
-
-    // Detect visibility of the section using IntersectionObserver
-    useEffect(() => {
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                if (!entry.isIntersecting) {
-                    // Close the section when it's not visible, but don't affect the page's animation
-                    setShowBasics(false);
-                }
-            },
-            {
-                threshold: 0.1, // Trigger when 10% of the section is in view
-            }
-        );
-
-        if (sectionRef.current) {
-            observer.observe(sectionRef.current);
-        }
-
-        return () => {
-            if (sectionRef.current) {
-                observer.unobserve(sectionRef.current);
-            }
-        };
-    }, []);
+    
     useEffect(() => {
         if (showBasics && basicsRef.current) {
             setHeight(basicsRef.current.scrollHeight);
@@ -62,7 +38,7 @@ const MonitoringFundamental = () => {
                             It gives you alerts when something goes wrong so you can fix issues fast.
                         </p>
 
-                        <h2 className="text-2xl font-semibold text-gray-700 mt-4">Key Concepts</h2>
+                        <h2 className="text-2xl font-semibold text-gray-700 mt-4">Core Concepts & Components</h2>
                         <ul className="list-disc pl-5 text-gray-600">
                             <li><strong>Metrics:</strong> Data like CPU usage, memory, and response times.</li>
                             <li><strong>Prometheus:</strong> Collects and stores system metrics.</li>
@@ -70,6 +46,16 @@ const MonitoringFundamental = () => {
                             <li><strong>Alerts:</strong> Notifies you when something goes wrong (e.g., high CPU usage).</li>
                             <li><strong>Time-Series Data:</strong> Data that is collected over time, often in regular intervals.</li>
                             <li><strong>Exporters:</strong> Tools that send metrics from systems to Prometheus.</li>
+                        </ul>
+                        <h2 className="text-2xl font-semibold text-gray-700 mt-4">Hands-On</h2>
+                        <p className="text-gray-600">
+                            Start with the following steps to work with Grafana and Prometheus:
+                        </p>
+                        <ul className="list-disc pl-5 text-gray-600">
+                            <li><strong>Install Prometheus:</strong> Set up Prometheus to collect metrics from your systems.</li>
+                            <li><strong>Install Grafana:</strong> Set up Grafana to visualize the metrics collected by Prometheus.</li>
+                            <li><strong>Create Dashboards:</strong> Use Grafana to create dashboards that display the metrics you care about.</li>
+                            <li><strong>Set Alerts:</strong> Configure alerts in Prometheus to notify you when metrics exceed certain thresholds.</li>
                         </ul>
                     </div>
                 </div>

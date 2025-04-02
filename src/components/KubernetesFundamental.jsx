@@ -5,31 +5,7 @@ const KubernetesFundamental = () => {
     const [height, setHeight] = useState(0);
     const basicsRef = useRef(null);
     const sectionRef = useRef(null);
-
-    // Detect visibility of the section using IntersectionObserver
-    useEffect(() => {
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                if (!entry.isIntersecting) {
-                    // Close the section when it's not visible, but don't affect the page's animation
-                    setShowBasics(false);
-                }
-            },
-            {
-                threshold: 0.1, // Trigger when 10% of the section is in view
-            }
-        );
-
-        if (sectionRef.current) {
-            observer.observe(sectionRef.current);
-        }
-
-        return () => {
-            if (sectionRef.current) {
-                observer.unobserve(sectionRef.current);
-            }
-        };
-    }, []);
+    
     useEffect(() => {
         if (showBasics && basicsRef.current) {
             setHeight(basicsRef.current.scrollHeight);

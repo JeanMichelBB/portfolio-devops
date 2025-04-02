@@ -4,32 +4,7 @@ const PythonFundamental = () => {
     const [showBasics, setShowBasics] = useState(false);
     const [height, setHeight] = useState(0);
     const basicsRef = useRef(null);
-    const sectionRef = useRef(null);
-
-    // Detect visibility of the section using IntersectionObserver
-    useEffect(() => {
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                if (!entry.isIntersecting) {
-                    // Close the section when it's not visible, but don't affect the page's animation
-                    setShowBasics(false);
-                }
-            },
-            {
-                threshold: 0.1, // Trigger when 10% of the section is in view
-            }
-        );
-
-        if (sectionRef.current) {
-            observer.observe(sectionRef.current);
-        }
-
-        return () => {
-            if (sectionRef.current) {
-                observer.unobserve(sectionRef.current);
-            }
-        };
-    }, []);
+    
     useEffect(() => {
         if (showBasics && basicsRef.current) {
             setHeight(basicsRef.current.scrollHeight);
@@ -41,12 +16,12 @@ const PythonFundamental = () => {
     return (
         <div>
             {/* Fundamental Concepts (Collapsible with Animation) */}
-            <section className="mb-8" ref={sectionRef}>
+            <section className="mb-8">
                 <button
                     onClick={() => setShowBasics(!showBasics)}
                     className="w-full text-left bg-gray-200 p-3 rounded-md font-semibold hover:bg-gray-300 transition flex justify-between items-center"
                 >
-                    <span>Python Fundamentals</span>
+                    <span>Programming Fundamentals</span>
                     <span>{showBasics ? "↑" : "↓"}</span>
                 </button>
 
@@ -57,32 +32,73 @@ const PythonFundamental = () => {
                 >
                     <div className="mt-4 p-4 bg-gray-100 rounded-md">
                         {/* Introduction */}
-                        <h2 className="text-2xl font-semibold text-gray-700 mb-2">Introduction to Python</h2>
+                        <h2 className="text-2xl font-semibold text-gray-700 mb-2">Introduction to Programming</h2>
                         <p className="text-gray-600">
-                            Python is a versatile, high-level programming language known for its readability and simple syntax. It is widely used in web development, data analysis, automation, machine learning, and more. Python's extensive library ecosystem makes it a powerful tool for developers.
+                            Programming is the process of writing instructions for a computer to execute. 
+                            It is used in software development, automation, web applications, data analysis, and more.
                         </p>
 
                         {/* Key Concepts */}
                         <h2 className="text-2xl font-semibold text-gray-700 mt-4">Key Concepts</h2>
                         <ul className="list-disc pl-5 text-gray-600">
-                            <li><strong>Variables:</strong> Containers for storing data values, such as numbers, strings, and more.</li>
-                            <li><strong>Data Types:</strong> The classification of data such as integers, strings, floats, lists, dictionaries, etc.</li>
+                            <li><strong>Variables:</strong> Containers for storing data values.</li>
+                            <li><strong>Data Types:</strong> Integers, strings, floats, lists, dictionaries, objects.</li>
                             <li><strong>Functions:</strong> Reusable blocks of code that perform specific tasks.</li>
-                            <li><strong>Loops:</strong> Structures like `for` and `while` loops that allow for repeating actions multiple times.</li>
-                            <li><strong>Conditionals:</strong> Statements like `if`, `else`, and `elif` to make decisions in the program.</li>
+                            <li><strong>Loops:</strong> Structures like `for` and `while` loops for iteration.</li>
+                            <li><strong>Conditionals:</strong> `if`, `else`, and `elif` statements for decision-making.</li>
+                        </ul>
+
+                        {/* Frontend Development */}
+                        <h2 className="text-2xl font-semibold text-gray-700 mt-4">Frontend Development</h2>
+                        <p className="text-gray-600">
+                            The frontend is what users interact with. It includes:
+                        </p>
+                        <ul className="list-disc pl-5 text-gray-600">
+                            <li><strong>HTML:</strong> Structure of web pages.</li>
+                            <li><strong>CSS:</strong> Styling and layout.</li>
+                            <li><strong>JavaScript:</strong> Adds interactivity.</li>
+                            <li><strong>React/Vue/Angular:</strong> Frameworks for building complex UIs.</li>
+                        </ul>
+
+                        {/* Backend Development */}
+                        <h2 className="text-2xl font-semibold text-gray-700 mt-4">Backend Development</h2>
+                        <p className="text-gray-600">
+                            The backend handles business logic, databases, and APIs:
+                        </p>
+                        <ul className="list-disc pl-5 text-gray-600">
+                            <li><strong>Python:</strong> (Flask, Django) for APIs and web applications.</li>
+                            <li><strong>JavaScript:</strong> (Node.js, Express) for backend services.</li>
+                            <li><strong>PHP, Java, Go:</strong> Other backend languages.</li>
+                            <li><strong>REST & GraphQL:</strong> API communication standards.</li>
+                        </ul>
+
+                        {/* Databases & SQL */}
+                        <h2 className="text-2xl font-semibold text-gray-700 mt-4">Databases & SQL</h2>
+                        <p className="text-gray-600">
+                            Databases store and retrieve application data:
+                        </p>
+                        <ul className="list-disc pl-5 text-gray-600">
+                            <li><strong>SQL:</strong> (MySQL, PostgreSQL, SQLite) for structured data.</li>
+                            <li><strong>NoSQL:</strong> (MongoDB, Firebase) for flexible, document-based storage.</li>
+                            <li><strong>ORMs:</strong> SQLAlchemy, Prisma, or Sequelize to interact with databases in code.</li>
                         </ul>
 
                         {/* Hands-On */}
                         <h2 className="text-2xl font-semibold text-gray-700 mt-4">Hands-On</h2>
-                        <p className="text-gray-600">
-                            Get started with Python using these basic steps:
-                        </p>
-                        <ul className="list-disc pl-5 text-gray-600">
-                            <li><strong>Install Python:</strong> Download and install Python from the official website (https://www.python.org/).</li>
-                            <li><strong>Write Code:</strong> Use any text editor or IDE (like VSCode or PyCharm) to write Python code.</li>
-                            <li><strong>Run Python Scripts:</strong> Open a terminal or command prompt and run a Python script using `python script_name.py`.</li>
-                            <li><strong>Learn Libraries:</strong> Explore Python libraries such as NumPy, Pandas, Flask, or Django to enhance your development experience.</li>
-                        </ul>
+                        <pre className="bg-gray-900 text-white p-4 rounded-md text-sm">
+                            {`# Python: Simple function
+def greet(name):
+    return f"Hello, {name}!"
+
+# JavaScript: Event listener
+document.querySelector("button").addEventListener("click", () => {
+    alert("Button clicked!");
+});
+
+# SQL: Retrieve users
+SELECT * FROM users WHERE active = 1;
+`}
+                        </pre>
                     </div>
                 </div>
             </section>

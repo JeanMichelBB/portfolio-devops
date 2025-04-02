@@ -7,31 +7,6 @@ const LinuxFundamental = () => {
     const basicsRef = useRef(null);
     const sectionRef = useRef(null);
 
-    // Detect visibility of the section using IntersectionObserver
-    useEffect(() => {
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                if (!entry.isIntersecting) {
-                    // Close the section when it's not visible, but don't affect the page's animation
-                    setShowBasics(false);
-                }
-            },
-            {
-                threshold: 0.1, // Trigger when 10% of the section is in view
-            }
-        );
-
-        if (sectionRef.current) {
-            observer.observe(sectionRef.current);
-        }
-
-        return () => {
-            if (sectionRef.current) {
-                observer.unobserve(sectionRef.current);
-            }
-        };
-    }, []);
-
     useEffect(() => {
         if (showBasics && basicsRef.current) {
             setHeight(basicsRef.current.scrollHeight);
@@ -63,7 +38,7 @@ const LinuxFundamental = () => {
                             Linux is a family of open-source Unix-like operating systems based on the Linux kernel. It is widely used for server environments, development workstations, and even on mobile devices with Android. One of the main benefits of Linux is its flexibility, stability, and large community support.
                         </p>
 
-                        <h2 className="text-2xl font-semibold text-gray-700 mt-4">Key Concepts</h2>
+                        <h2 className="text-2xl font-semibold text-gray-700 mt-4">Core Concepts & Components</h2>
                         <ul className="list-disc pl-5 text-gray-600">
                             <li><strong>Kernel:</strong> The core part of the Linux operating system, responsible for managing hardware and system resources.</li>
                             <li><strong>Shell:</strong> A command-line interface used to interact with the operating system, such as Bash, Zsh, or Fish.</li>

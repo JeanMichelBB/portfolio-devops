@@ -7,31 +7,6 @@ const CloudFundamental = () => {
     const basicsRef = useRef(null);
     const sectionRef = useRef(null);
 
-    // Detect visibility of the section using IntersectionObserver
-    useEffect(() => {
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                if (!entry.isIntersecting) {
-                    // Close the section when it's not visible, but don't affect the page's animation
-                    setShowBasics(false);
-                }
-            },
-            {
-                threshold: 0.1, // Trigger when 10% of the section is in view
-            }
-        );
-
-        if (sectionRef.current) {
-            observer.observe(sectionRef.current);
-        }
-
-        return () => {
-            if (sectionRef.current) {
-                observer.unobserve(sectionRef.current);
-            }
-        };
-    }, []);
-
     useEffect(() => {
         if (showBasics && basicsRef.current) {
             setHeight(basicsRef.current.scrollHeight);
@@ -74,8 +49,7 @@ const CloudFundamental = () => {
                         <h2 className="text-2xl font-semibold text-gray-700 mt-4">Cloud Providers & Tools</h2>
                         <ul className="list-disc pl-5 text-gray-600">
                             <li><strong>AWS:</strong> Amazon's cloud platform offering compute, storage, and various other services.</li>
-                            <li><strong>Azure:</strong> Microsoft's cloud platform with a broad set of tools and services.</li>
-                            <li><strong>Google Cloud:</strong> Google's suite of cloud computing services including AI, data analytics, and more.</li>
+                            <li><strong>OCI:</strong> Oracle's cloud infrastructure providing a range of cloud services.</li>
                         </ul>
                     </div>
                 </div>

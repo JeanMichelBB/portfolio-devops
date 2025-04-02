@@ -5,31 +5,7 @@ const TerraformFundamental = () => {
     const [height, setHeight] = useState(0);
     const basicsRef = useRef(null);
     const sectionRef = useRef(null);
-
-    // Detect visibility of the section using IntersectionObserver
-    useEffect(() => {
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                if (!entry.isIntersecting) {
-                    // Close the section when it's not visible, but don't affect the page's animation
-                    setShowBasics(false);
-                }
-            },
-            {
-                threshold: 0.1, // Trigger when 10% of the section is in view
-            }
-        );
-
-        if (sectionRef.current) {
-            observer.observe(sectionRef.current);
-        }
-
-        return () => {
-            if (sectionRef.current) {
-                observer.unobserve(sectionRef.current);
-            }
-        };
-    }, []);
+    
     useEffect(() => {
         if (showBasics && basicsRef.current) {
             setHeight(basicsRef.current.scrollHeight);
@@ -65,7 +41,7 @@ const TerraformFundamental = () => {
                         {/* Key Concepts */}
                         <h2 className="text-2xl font-semibold text-gray-700 mt-4">Key Concepts</h2>
                         <ul className="list-disc pl-5 text-gray-600">
-                            <li><strong>Providers:</strong> Plugins that allow Terraform to interact with cloud platforms and services (e.g., AWS, Azure, Google Cloud).</li>
+                            <li><strong>Providers:</strong> Plugins that allow Terraform to interact with cloud platforms and services (e.g., AWS, OCI).</li>
                             <li><strong>Resources:</strong> Define the infrastructure components (e.g., servers, storage, network) that Terraform manages and provisions.</li>
                             <li><strong>Modules:</strong> Reusable, self-contained configurations that can be used to organize and scale Terraform code.</li>
                             <li><strong>State:</strong> Terraform maintains an up-to-date state of the infrastructure it manages, ensuring that changes are applied safely.</li>

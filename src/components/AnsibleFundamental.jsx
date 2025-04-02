@@ -6,30 +6,6 @@ const AnsibleFundamental = () => {
     const basicsRef = useRef(null);
     const sectionRef = useRef(null);
 
-    // Detect visibility of the section using IntersectionObserver
-    useEffect(() => {
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                if (!entry.isIntersecting) {
-                    // Close the section when it's not visible, but don't affect the page's animation
-                    setShowBasics(false);
-                }
-            },
-            {
-                threshold: 0.1, // Trigger when 10% of the section is in view
-            }
-        );
-
-        if (sectionRef.current) {
-            observer.observe(sectionRef.current);
-        }
-
-        return () => {
-            if (sectionRef.current) {
-                observer.unobserve(sectionRef.current);
-            }
-        };
-    }, []);
 
     // Adjust the height for the animation of the collapsible content
     useEffect(() => {
@@ -61,9 +37,9 @@ const AnsibleFundamental = () => {
                     <div className="mt-4 p-4 bg-gray-100 rounded-md">
                         <h2 className="text-2xl font-semibold text-gray-700 mb-2">Introduction to Ansible</h2>
                         <p className="text-gray-600">
-                            Ansible is an open-source IT automation tool that helps with **configuration management**,
-                            **application deployment**, and **infrastructure as code**. It uses **YAML-based playbooks**
-                            and works over **SSH (agentless)**.
+                            Ansible is an open-source IT automation tool that helps with <strong>configuration management</strong>,
+                            <strong>application deployment</strong>, and <strong>infrastructure as code</strong>. It uses <strong>YAML-based playbooks</strong>
+                            and works over <strong>SSH (agentless)</strong>.
                         </p>
 
                         <h2 className="text-2xl font-semibold text-gray-700 mt-4">Core Concepts & Components</h2>
