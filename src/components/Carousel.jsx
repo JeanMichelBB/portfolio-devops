@@ -51,7 +51,7 @@ const Carousel = () => {
           onClick={prevSlide}
         />
         {/* Center Image wrapped in Link */}
-        <Link to={images[index].link} className="w-1/2 h-130">
+        <Link to={images[index].link} className="w-1/2 h-100 sm:h-120 md:h-130">
           <img
             src={isMobile ? images[index].mobileImage : images[index].webImage}
             alt="Current Slide"
