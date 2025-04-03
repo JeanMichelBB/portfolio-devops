@@ -1,6 +1,6 @@
 # DevOps Portfolio
-<!-- .Banner.png -->
-![Portfolio Banner](banner.png)
+
+![Portfolio Banner](banner.jpg)
 
 Welcome to my DevOps portfolio! Here, you'll find a collection of my work, projects, and expertise in cloud computing, automation, CI/CD, and infrastructure management.
 
