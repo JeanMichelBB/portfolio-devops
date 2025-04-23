@@ -43,6 +43,9 @@ const Home = () => {
           <Link to="/about" className="text-blue-600 font-medium hover:underline hover:text-blue-700 transition-colors">
             . More about me here
           </Link>.
+          <br />
+          <strong>Look for my latest projects below. ↓</strong>
+          <br />
         </p>
       </div>
 
