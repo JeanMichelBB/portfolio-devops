@@ -8,12 +8,33 @@ import grafanaMobile from "../assets/grafanamobile.jpg";
 import grafanaWeb from "../assets/grafanaweb.jpg";
 import twitterCloneMobile from "../assets/twitterclonemobile.jpg";
 import twitterCloneWeb from "../assets/twittercloneweb.jpg";
+import { desc } from "framer-motion/client";
 
 const images = [
-  { mobileImage: apercuMobile, webImage: apercuWeb, link: "/projects/apercu" },
-  { mobileImage: botwhyMobile, webImage: botwhyWeb, link: "/projects/botwhy" },
-  { mobileImage: grafanaMobile, webImage: grafanaWeb, link: "/projects/grafana" },
-  { mobileImage: twitterCloneMobile, webImage: twitterCloneWeb, link: "/projects/twitter-clone" },
+  {
+    mobileImage: apercuMobile,
+    webImage: apercuWeb,
+    link: "/projects/apercu",
+    description: "Aperçu is a personal portfolio web app showcasing my services, experience, and pricing with a clean, user-friendly interface and secure client login."
+  },
+  {
+    mobileImage: botwhyMobile,
+    webImage: botwhyWeb,
+    link: "/projects/botwhy",
+    description: "BotWhy is a full-stack chatbot app using GPT-4o Mini, Google Auth, FastAPI, and MySQL, offering a smart conversational experience in a modern React interface."
+  },
+  {
+    mobileImage: grafanaMobile,
+    webImage: grafanaWeb,
+    link: "/projects/grafana",
+    description: "A Grafana-powered monitoring dashboard deployed with Docker and Prometheus, visualizing system metrics from my Ubuntu server and Docker containers."
+  },
+  {
+    mobileImage: twitterCloneMobile,
+    webImage: twitterCloneWeb,
+    link: "/projects/twitter-clone",
+    description: "A full-stack Twitter clone with React, FastAPI, and MySQL, supporting tweeting, following, messaging, and responsive design for all devices."
+  }
 ];
 
 const Carousel = () => {
@@ -59,6 +80,7 @@ const Carousel = () => {
           />
         </Link>
         {/* Right Image acting as Button */}
+
         <img
           src={isMobile ? images[(index + 1) % images.length].mobileImage : images[(index + 1) % images.length].webImage}
           alt="Next Slide"
@@ -66,6 +88,13 @@ const Carousel = () => {
           onClick={nextSlide}
         />
       </div>
+      {/* Description */}
+
+      <div className="absolute bottom-0 left-0 right-0 px-4 sm:px-10 md:px-24 lg:px-40 py-4 bg-gradient-to-t from-black to-transparent text-white text-center">
+        <p className="text-lg font-semibold">
+          {images[index].description}
+        </p>
+        </div>
     </div>
   );
 };
