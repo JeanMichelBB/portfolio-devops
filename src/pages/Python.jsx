@@ -21,26 +21,26 @@ const Python = () => {
       }}
     >
       <div className={`min-h-screen text-left max-w-3xl mx-auto py-10 transition-all duration-500 p-8 ${isVisible ? "opacity-100" : "opacity-0"}`}>
-        <h1 className="text-4xl font-bold text-gray-800 mb-6 text-center">Python</h1>
+        <h1 className="text-4xl font-bold text-gray-800 mb-6 text-center">Full-Stack Developer</h1>
 
         {/* 🎓 Python Fundamental Concepts (Collapsible) */}
         <PythonFundamental />
 
         {/* 🚀 My Experience with Python */}
         <section className="mb-8">
-          <h2 className="text-2xl font-semibold text-gray-700 mb-2">My Experience with Python</h2>
+          <h2 className="text-2xl font-semibold text-gray-700 mb-2">My Experience with Full-Stack Developer</h2>
           <p className="text-gray-600">
-            I have used Python alongside various technologies, including <strong>HTML, CSS, JavaScript, TypeScript, Tailwind CSS, React,</strong> and <strong>FastAPI</strong>. 
+            I have used Python alongside various technologies, including <strong>HTML, CSS, JavaScript, TypeScript, Tailwind CSS, React, SQL,</strong> and <strong>FastAPI</strong>.
             Python has been my go-to language for building backend applications, and I have integrated it seamlessly with frontend technologies like React for dynamic and responsive web applications.
           </p>
           <p className="text-gray-600">
-            A significant part of my work involved creating APIs with <strong>FastAPI</strong>, which is known for its speed and modern features. 
+            A significant part of my work involved creating APIs with <strong>FastAPI</strong>, which is known for its speed and modern features.
             I also leveraged Python’s powerful libraries, including <strong>Pandas</strong> and <strong>NumPy</strong>, for data manipulation and scientific computing.
           </p>
         </section>
 
- {/* Real-World Projects */}
- <section className="mb-8">
+        {/* Real-World Projects */}
+        <section className="mb-8">
           <h2 className="text-2xl font-semibold text-gray-700 mb-2">Real-World Projects</h2>
 
           <div className="bg-gray-100 p-4 rounded-lg shadow-md mb-4">
@@ -110,12 +110,35 @@ const Python = () => {
           </ul>
         </section>
 
-        {/* 📚 Python Learning Resources */}
+        {/* 📚 Full-Stack Developer Learning Resources */}
         <section className="mb-8 pb-30">
           <h2 className="text-2xl font-semibold text-gray-700 mb-2">Resources & Further Learning</h2>
           <ul className="list-disc pl-5 text-gray-600">
-            <li><a href="https://docs.python.org/3/" target="_blank" rel="noopener noreferrer" className="text-blue-600">Python Official Documentation</a></li>
-            <li><a href="https://realpython.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600">Real Python (Tutorials & Guides)</a></li>
+            <li>
+              <a href="https://roadmap.sh/full-stack" target="_blank" rel="noopener noreferrer" className="text-blue-600">
+                Full-Stack Developer Roadmap
+              </a>
+            </li>
+            <li>
+              <a href="https://www.theodinproject.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600">
+                The Odin Project (Free Full-Stack Curriculum)
+              </a>
+            </li>
+            <li>
+              <a href="https://docs.python.org/3/" target="_blank" rel="noopener noreferrer" className="text-blue-600">
+                Python Official Documentation
+              </a>
+            </li>
+            <li>
+              <a href="https://realpython.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600">
+                Real Python (Tutorials & Guides)
+              </a>
+            </li>
+            <li>
+              <a href="https://fullstackopen.com/en/" target="_blank" rel="noopener noreferrer" className="text-blue-600">
+                Full-Stack Open (University of Helsinki)
+              </a>
+            </li>
           </ul>
         </section>
       </div>

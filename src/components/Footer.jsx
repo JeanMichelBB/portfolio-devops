@@ -32,12 +32,13 @@ const Footer = () => (
                             ]
                         },
                         {
-                            title: "Python",
+                            title: "Full-Stack Developer",
                             link: "/python",
                             docs: "https://docs.python.org/3/",
                             descriptions: [
-                                { text: "Core Programming Concepts", url: "https://docs.python.org/3/" },
-                                { text: "Object-Oriented Programming", url: "https://docs.python.org/3/tutorial/classes.html" }
+                                { text: "Full-Stack Developer Roadmap", url: "https://roadmap.sh/full-stack" },
+                                { text: "The Odin Project – Full-Stack", url: "https://www.theodinproject.com/" },
+                                { text: "Full-Stack Open – React, Node.js", url: "https://fullstackopen.com/en/" },
                             ]
                         },
                         {

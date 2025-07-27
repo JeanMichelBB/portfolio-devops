@@ -17,7 +17,7 @@ import cicd from '../assets/cicd.jpg';
 const subjects = [
     { name: "Linux", path: "/linux-bash", description: "Deep understanding of Linux systems, terminal commands, and automation.", image: linux, bg: "bg-green-200" },
     { name: "Git", path: "/git", description: "Proficient in Git workflows, branching strategies, and collaborative development.", image: git, bg: "bg-red-200" },
-    { name: "Python", path: "/python", description: "Experience in Python for scripting, automation, web development, and data processing.", image: python, bg: "bg-yellow-200" },
+    { name: "Full-Stack Developer", path: "/python", description: "Experience in Python for scripting, automation, web development, and data processing.", image: python, bg: "bg-yellow-200" },
     { name: "Docker", path: "/docker", description: "Skilled in containerization, Docker Compose, and image optimization.", image: docker, bg: "bg-blue-200" },
     { name: "Networking", path: "/networking", description: "Strong grasp of network protocols, security, and system architecture.", image: networking, bg: "bg-purple-200" },
     { name: "Kubernetes", path: "/kubernetes", description: "Knowledge of Kubernetes for managing containerized applications at scale.", image: kubernetes, bg: "bg-teal-200" },

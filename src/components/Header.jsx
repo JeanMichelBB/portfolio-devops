@@ -77,7 +77,7 @@ const Header = () => {
                         </li>
                         <li className="flex items-center h-full">
                             <Link to="/python" className="text-sm hover:text-blue-500 leading-none" onClick={handleLinkClick}>
-                                Python
+                                Full-Stack
                             </Link>
                         </li>
                         <li className="flex items-center h-full">
