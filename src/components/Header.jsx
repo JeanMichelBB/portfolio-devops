@@ -112,6 +112,7 @@ const Header = () => {
                                     <li><Link to="/nginx" className="block px-4 py-2 text-sm hover:bg-gray-200" onClick={handleLinkClick}>NGINX</Link></li>
                                     <li><Link to="/ansible" className="block px-4 py-2 text-sm hover:bg-gray-200" onClick={handleLinkClick}>Ansible</Link></li>
                                     <li><Link to="/cicd" className="block px-4 py-2 text-sm hover:bg-gray-200" onClick={handleLinkClick}>CICD</Link></li>
+                                    <li><Link to="/jira" className="block px-4 py-2 text-sm hover:bg-gray-200" onClick={handleLinkClick}>Agile & Jira</Link></li>
                                 </ul>
                             )}
                         </li>
@@ -186,6 +187,7 @@ const Header = () => {
                                     <li><Link to="/nginx" className="block px-4 py-1 hover:bg-gray-200" onClick={handleLinkClick}>NGINX</Link></li>
                                     <li><Link to="/ansible" className="block px-4 py-1 hover:bg-gray-200" onClick={handleLinkClick}>Ansible</Link></li>
                                     <li><Link to="/cicd" className="block px-4 py-1 hover:bg-gray-200" onClick={handleLinkClick}>CICD</Link></li>
+                                    <li><Link to="/jira" className="block px-4 py-1 hover:bg-gray-200" onClick={handleLinkClick}>Agile & Jira</Link></li>
                                 </ul>
                             )}
                         </li>

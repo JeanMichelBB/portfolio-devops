@@ -12,7 +12,8 @@ import terraform from '../assets/terraform.jpg';
 import ansible from '../assets/ansible.jpg';
 import cloud from '../assets/cloud.jpg';
 import cicd from '../assets/cicd.jpg';
-
+import jira from '../assets/jira.png';
+import me from '../assets/me.png';
 
 const subjects = [
     { name: "Linux", path: "/linux-bash", description: "Deep understanding of Linux systems, terminal commands, and automation.", image: linux, bg: "bg-green-200" },
@@ -27,15 +28,17 @@ const subjects = [
     { name: "Ansible", path: "/ansible", description: "Automating system configuration and deployment with Ansible playbooks.", image: ansible, bg: "bg-pink-200" },
     { name: "Cloud", path: "/cloud", description: "Hands-on experience with cloud platforms, architecture, and scalability.", image: cloud, bg: "bg-cyan-200" },
     { name: "CI/CD", path: "/cicd", description: "Building and maintaining automated CI/CD pipelines for software deployment.", image: cicd, bg: "bg-lime-200" },
+    { name: "Agile & Jira", path: "/jira", description: "Experienced in Agile methodologies and proficient with Jira for team collaboration.", image: jira, bg: "bg-yellow-300" },
+    { name: "About Me", path: "/about", description: "Learn more about my journey, skills, and experiences.", image: me, bg: "bg-gray-300" }
 ];
 
 const SubjectsGrid = () => {
     const navigate = useNavigate();
 
-    
+
     const handleLinkClick = (path) => {
-        sessionStorage.setItem('scrollPosition', window.scrollY); 
-        navigate(path); 
+        sessionStorage.setItem('scrollPosition', window.scrollY);
+        navigate(path);
     };
 
     useEffect(() => {
@@ -44,8 +47,8 @@ const SubjectsGrid = () => {
         if (window.location.hash === '' || window.location.hash === '#/') {
             window.scrollTo(0, 0);
         } else if (savedPosition) {
-            window.scrollTo(0, parseInt(savedPosition)); 
-            sessionStorage.removeItem('scrollPosition'); 
+            window.scrollTo(0, parseInt(savedPosition));
+            sessionStorage.removeItem('scrollPosition');
         }
     }, []);
 
@@ -54,7 +57,7 @@ const SubjectsGrid = () => {
             {subjects.map((subject, index) => (
                 <div key={index} className={`relative ${subject.bg} border-[5px] border-white flex`}>
                     <button
-                        onClick={() => handleLinkClick(subject.path)} 
+                        onClick={() => handleLinkClick(subject.path)}
                         className="block hover:underline z-10 relative w-full h-full p-4"
                     >
                         <div className="flex w-full flex-col md:flex-row">
@@ -69,9 +72,15 @@ const SubjectsGrid = () => {
                             </div>
 
                             {/* Text */}
-                            <div className="flex flex-col justify-center p-4 w-full md:w-1/3 bg-white/50">
-                                <h3 className="text-xl font-semibold">{subject.name}</h3>
-                                <p className="text-lg mt-2">{subject.description}</p>
+                            <div className="flex flex-col justify-center p-4 w-full md:w-1/3 bg-white/30 backdrop-blur-md rounded-lg shadow-lg">                                <h3
+                                className="text-[2.6rem] font-bold text-white"
+                                style={{
+                                    textShadow:
+                                        "-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000"
+                                }}
+                            >
+                                {subject.name}
+                            </h3>                                <p className="text-lg mt-2">{subject.description}</p>
                             </div>
                         </div>
                     </button>

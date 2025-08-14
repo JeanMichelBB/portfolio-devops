@@ -121,6 +121,15 @@ const Footer = () => (
                                 { text: "Network Protocols & Packet Analysis", url: "https://www.wireshark.org/docs/" },
                                 { text: "Wireshark for Troubleshooting", url: "https://www.wireshark.org/docs/" }
                             ]
+                        },
+                        {
+                            title: "Jira",
+                            link: "/jira",
+                            docs: "https://www.atlassian.com/software/jira/guides",
+                            descriptions: [
+                                { text: "Agile Project Management", url: "https://www.atlassian.com/software/jira/guides" },
+                                { text: "Scrum & Kanban Boards", url: "https://www.atlassian.com/software/jira/guides" }
+                            ]
                         }
                     ].map((item, index) => (
                         <div key={index}>

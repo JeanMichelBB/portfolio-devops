@@ -36,8 +36,7 @@ const projects = {
   "grafana": {
     title: "Grafana Monitoring",
     description: "A real-time monitoring dashboard using Prometheus, Node Exporter, and Grafana.",
-    url: "https://grafana.sacenpapier.org/",
-    github: "https://github.com/JeanMichelBB/grafana-setup",
+    url: "https://snapshots.raintank.io/dashboard/snapshot/zcU3p7u4s6hH6T29bOku2VeEIYazaKaY",
     iframeSrc: "https://snapshots.raintank.io/dashboard/snapshot/zcU3p7u4s6hH6T29bOku2VeEIYazaKaY",
     image: null, // Add an image later if needed
     longDescription: "This project features a real-time monitoring dashboard using Prometheus, Node Exporter, and Grafana. The dashboard provides insights into system performance and health, allowing users to monitor key metrics in real-time. The setup includes Prometheus for data collection, Node Exporter for system metrics, and Grafana for visualization. This project showcases my skills in system monitoring and my ability to create effective dashboards for data analysis.",
