@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import LatestProject from '../components/LatestProject';
 import SubjectsGrid from '../components/SubjectsGrid';
 import Carousel from '../components/Carousel';
+import DevopsRoad from '../components/DevopsRoad';
 import { Link } from 'react-router-dom';
 
 const Home = () => {
@@ -50,6 +51,10 @@ const Home = () => {
       </div>
 
       <div className="mt-10">
+        {/* */}
+        <div className={`transition-opacity duration-500 ${showLatestProject ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
+          <DevopsRoad />
+        </div>
         {/* LatestProject - Appears at scrollY > 100 */}
         <div className={`transition-opacity duration-500 ${showLatestProject ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
           <LatestProject />
